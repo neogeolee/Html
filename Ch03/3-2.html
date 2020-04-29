@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>3-2</title>
+    <style>
+        /*자식선택자*/
+        body > h3{/*부모인 body 안에 있는 태그 h3 선택*/
+            color: #0000ff;
+        }
+        .song > h3{/*부모인 section 으로 해도되지만 클래스가 있기에 클래스로 선택하는게 좀 더 직관적*/
+            color: #f00;
+        }
+        .song > .s1 > em{
+            color: gray;
+        }
+        .song > .s2 > em{
+            color: rgb(70, 69, 146);
+        }
+        /*후손선택자*/
+        .song strong{
+            color : rgb(20, 187, 173);
+        }
+    </style>
+</head>
+<body>
+    <h3>2.자식 선택자</h3>
+
+    <section class="song">
+        <h3>애국가</h3>
+            <p class="s1">
+                동해물과 백두산이 마르고 닳도록<br/>
+                하느님이 보우하사 우리나라 만세<br/>
+                <em>
+                    무궁화 삼천리 화려강산<br/>
+                    <strong>대한사람</strong> 대한으로 길이보전하세.
+                </em>
+            </p>
+            <p class="s2">
+                남산 위에 저 소나무 철갑을 두른듯<br/>
+                바람서리 불변함은 우리기상 일세<br/>
+                <em>
+                    무궁화 삼천리 화려강산<br/>
+                    <strong>대한사람</strong> 대한으로 길이보전하세.
+                </em>
+            </p>
+    </section>
+
+</body>
+</html>
