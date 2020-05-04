@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>4-1</title>
+        <style>
+            /* display : none 
+                - 태그를 브라우저 화면에서 제거(자리공간 포함)
+                - visibility hidden은 자리공간은 남음
+                
+                display : block
+                - inline 태그를 block 태그로 전환
+                - 세로방향으로 태그출력
+                - width height 속성 적용됨
+
+                display : inline
+                - block 태그를 inline 태그로 전환
+                - 가로방향으로 태그출력
+                - width height 속성 적용안됨
+
+                display: inline-block
+                -가로방향 태그출력(inline)
+                - width height 속성적용(block)
+
+            */
+            /*display : none*/
+            .box1 > span:nth-child(2){display: none; /*자리 공간까지 사라짐*/}
+            .box1 > span:nth-child(1){visibility: hidden; /*자리공간은 남아있음*/}
+            /* display : block */
+            .box2 > span:nth-child(2){display: block;}
+            /* display : inline */
+            .box3 > div:nth-child(2){display: inline;}
+            /* display : inline-block <가로방향으로 출력(inline 태그 특징), width, height 값 줄수있엉(block 태그 특징)*/
+            .box4 > *{display: inline-block;
+                      width : 100px;
+                      height : 100px;
+                      background: orange;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>1.CSS display 속성</h3>
+
+        <h4>display:none</h4>
+        <div class="box1">
+            <span>TEXT1</span>
+            <span>TEXT2</span>
+            <span>TEXT3</span>          
+        </div>
+        <h4>display:block</h4>
+        <div class="box2">
+            <span>TEXT1</span>
+            <span>TEXT2</span>
+            <span>TEXT3</span>          
+        </div>
+        <h4>display:inline</h4>
+        <div class="box3">
+            <span>TEXT1</span>
+            <div>TEXT2</div>
+            <span>TEXT3</span>          
+        </div>
+        <h4>display:inline-block</h4>
+        <div class="box4">
+            <span>TEXT1</span>
+            <div>TEXT2</div>
+            <span>TEXT3</span>          
+        </div>
+        
+    </body>
+</html>
