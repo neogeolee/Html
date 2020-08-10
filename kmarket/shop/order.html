@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>케이마켓::대한민국 1등 온라인 쇼핑몰</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+    #order {
+        float: right;
+        width: 985px;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    #order > nav {
+        width: 100%;
+        height: 36px;
+        border-bottom: 1px solid #000;
+        box-sizing: border-box;
+      }
+    #order > nav > h1 {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1;
+        font-family: 'Noto Sans KR', sans-serif;
+      }
+    #order > nav > p {
+        float: right;
+        margin-top: -10px;
+      }
+    #order > nav > p > strong {
+        font-weight: bold;
+      }
+    #order form > .product >  table {
+          width: 100%;
+          border-collapse: collapse;
+          border-spacing: 0;
+          border-top: 2px solid #000;
+          margin-top: 20px;
+      }
+    #order > section > form > .product > table > tbody > tr {
+        border-bottom: 1px solid #d3d3d3;
+    }
+    #order > section > form > .product > table > thead > tr > th {
+          padding: 12px 0;
+          background: #fff;
+          color: #383838;
+          font-size: 12px;
+          text-align: center;
+          letter-spacing: 0;
+      }
+    #order > section > form > .product > table > tbody > tr.empty {
+          display: none;
+      }
+    #order > section > form > .product > table > tbody > tr > td {
+          text-align: center;
+      }
+    #order > section > form > .product > table > tbody > tr > td > article {
+          overflow: hidden;
+      }
+    #order > section > form > .product > table > tbody > tr > td > article > a {
+          float: left;
+          display: inline-block;
+      }
+    #order > section > form > div > table > tbody > tr > td:nth-child(1) > article > a > img {
+          width: 80px;
+      }
+    #order > section > form > .product > table td > article > div {
+          float: left;
+          margin-top: 10px;
+      }
+    #order > section > form > div > table > tbody > tr > td:nth-child(1) > article > div > h2 > a{
+          font-size: 15px;
+          color: #111;
+      }
+    #order > section > form > .product > table > tbody > tr > td > article > div > p {
+          text-align: left;
+          color: #777;
+          margin-top: 4px;
+      }
+    #order > section > form > .product > table > tbody > tr > td:last-child {
+          color: #ff006c;
+          font-weight: bold;
+      }
+    #order > section > form > input[name=del] {
+          border-color: #bdbdbd;
+          border-bottom-color: #828282;
+          background: #fafafa;
+          color: #4d4d4d;
+          padding: 6px 11px;
+          border-width: 1px;
+          margin-top: 6px;
+      }
+    #order > section > form > section {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+    #order > section > form > section > article {
+        width: 560px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    #order > section > form > section > .delivery > h1 {
+        font-weight: bold;
+        font-size: 14px;
+        padding: 6px 0;
+        border-bottom: 1px solid #111;
+    }
+    #order > section > form > section > .delivery > div {
+        padding: 6px;
+        box-sizing: border-box;
+    }
+    #order > section > form > section > .delivery > div > label {
+        display: block;
+        padding: 4px 0;
+    }
+    #order > section > form > section > .delivery > div > label > input[type=text] {
+        color: #555;
+        font-weight: bold;
+        outline: none;
+        padding: 2px 0;
+    }
+    #order > section > form > section > .delivery > .user > label > span {
+        margin-left: 10px;
+        color: #888;
+    }
+    #order > section > form > section > .delivery > .address > label > input[type=button] {
+        padding: 4px 6px;
+        border: 1px solid #ccc;
+        background: #f0f4F9;
+        border-color: #acc0e0;
+        color: #3371c9;
+        outline: none;
+    }
+    #order > section > form > section > .delivery > .address > label > .addr {
+        width: 400px;
+    }
+    #order > section > form > section > .discount > h1 {
+        font-weight: bold;
+        font-size: 14px;
+        padding: 6px 0;
+        border-bottom: 1px solid #111;
+    }
+    #order > section > form > section > .discount > div {
+        overflow: hidden;
+        padding: 6px;
+        box-sizing: border-box;
+    }
+    #order > section > form > section > .discount > div > p {
+        float: left;
+    }
+    #order > section > form > section > .discount > div > label  {
+        float: right;
+    }
+    #order > section > form > section > .discount > div > label >input[type=text] {
+        display: inline-block;
+        outline: none;
+    }
+    #order > section > form > section > .discount > div > label >input[type=button] {
+        padding: 4px 6px;
+        border: 1px solid #ccc;
+        background: #f0f4F9;
+        border-color: #acc0e0;
+        color: #3371c9;
+        outline: none;
+    }
+    #order > section > form > section > .discount > div > span {
+        display: block;
+        margin-top: 20px;
+        color: #888;
+    }
+    #order > section > form > section > .payment > h1 {
+        font-weight: bold;
+        font-size: 14px;
+        padding: 6px 0;
+        border-bottom: 1px solid #111;
+    }
+    #order > section > form > section > .payment > div {
+        margin-bottom: 10px;
+        padding: 6px;
+        box-sizing: border-box;
+    }
+    #order > section > form > section > .payment > div > span {
+        display: inline-block;
+        color: #3a85c8;
+        margin: 6px 0;
+    }
+    #order > section > form > section > .payment > div > p > label {
+        margin-right: 16px;
+    }
+    #order > section > form > section > .payment > div > p >label > input {
+        margin-right: 4px;
+        vertical-align: bottom;
+        font-weight: bold;
+        outline: none;
+        padding: 2px 0;
+    }
+    #order > section > form > section > .alert {
+        width: 560px;
+        background: #f7f7f7;
+        padding: 6px;
+        padding-left: 20px;
+        color: #999;
+        box-sizing: border-box;
+    }
+    #order > section > form > section > .alert > ul {
+        list-style: inherit;
+    }
+    #order > section > form > section > .alert > ul > li {
+        line-height: 20px;
+    }
+    #order > section > form > section > .alert > ul > li > span {
+        position: relative;
+        left: -6px;
+    }
+    #order > section > form > section > .info {
+          position: absolute;
+          right: 0;
+          top: 25px;
+          width: 360px;
+          height: 412px;
+          padding: 20px;
+          background: #fff;
+          border: 1px solid #d3d3d3;
+          box-sizing: border-box;
+      }
+    #order > section > form > section > .info > h2 {
+          width: 100%;
+          font-weight: bold;
+          font-size: 16px;
+          border-bottom: 1px solid #111;
+          margin-bottom: 10px;
+          padding-bottom: 10px;
+          box-sizing: border-box;
+          color: #1e1e1e;
+      }
+    #order > section > form > section > .info > table {
+          width: 100%;
+      }
+    #order > section > form > section > .info > table > tbody > tr > td {
+          padding: 10px 0;
+          font-size: 14px;
+          font-weight: bold;
+          color: #555;
+      }
+    #order > section > form > section > .info > table > tbody > tr > td:last-child {
+          text-align: right;
+      }
+    #order > section > form > section > div > table > tbody > tr:last-child > td {
+          font-size: 20px;
+      }
+    #order > section > form > section > div > table > tbody > tr:last-child > td:nth-child(2) {
+          color: #ff006c;
+          font-size: 20px;
+          font-weight: bold;
+      }
+    #order > section > form > section > div > input[type=button] {
+          width: 100%;
+          height: 56px;
+          font-size: 26px;
+          border-width: 1px;
+          border-color: #d81818;
+          border-bottom-color: #9e1212;
+          background: #ed2f2f;
+          color: #fff;
+          box-sizing: border-box;
+          margin-top: 10px;
+      }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="top">
+                <div>
+                    <a href="#">로그인</a>
+                    <a href="#">회원가입</a>
+                    <a href="#">마이페이지</a>
+                    <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;장바구니</a>
+                </div>
+            </div>
+            <div class="logo">
+                <div>
+                    <a href="#"><img src="../img/header_logo.png" alt="로고"/></a>
+                    <form action="#">
+                        <input type="text" name="search"/>
+                        <button><i class="fa fa-search"></i></button>
+                    </form>                
+                </div>
+                
+            </div>
+            <div class="menu">
+                <div>
+                    <ul>
+                        <li><a href="#">히트상품</a></li>
+                        <li><a href="#">추천상품</a></li>
+                        <li><a href="#">최신상품</a></li>
+                        <li><a href="#">인기상품</a></li>
+                        <li><a href="#">할인상품</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">쿠폰존</a></li>
+                        <li><a href="#">사용후기</a></li>
+                        <li><a href="#">개인결제</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- 카테고리/베스트 상품 영역 -->
+            <aside>
+                <ul class="category">     
+                    <li><i class="fa fa-bars" aria-hidden="true"></i>카테고리</li>
+                    <li>
+                        <a href="#"><i class="fas fa-tshirt"></i>패션·의류·뷰티</a>
+                        <ol>
+                            <li><a href="#">남성의류</a></li>
+                            <li><a href="#">여성의류</a></li>
+                            <li><a href="#">잡화</a></li>
+                            <li><a href="#">뷰티</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-laptop"></i>가전·디지털</a>
+                        <ol>
+                            <li><a href="#">노트북/PC</a></li>
+                            <li><a href="#">가전</a></li>
+                            <li><a href="#">휴대폰</a></li>
+                            <li><a href="#">기타</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-utensils"></i>식품·생필품</a>
+                        <ol>
+                            <li><a href="#">신선식품</a></li>
+                            <li><a href="#">가공식품</a></li>
+                            <li><a href="#">건강식품</a></li>
+                            <li><a href="#">생필품</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-home"></i>홈·문구·취미</a>
+                        <ol>
+                            <li><a href="#">가구/DIY</a></li>
+                            <li><a href="#">침구·커튼</a></li>
+                            <li><a href="#">생활용품</a></li>
+                            <li><a href="#">사무용품</a></li>
+                        </ol>
+                    </li>
+                </ul>
+            </aside>
+            <!-- 주문결제 -->
+            <section id="order">
+                <!-- 제목, 페이지 네비게이션 -->
+                <nav>
+                    <h1>주문결제</h1>
+                    <p>
+                        HOME > <span>패션·의류·뷰티</span> > <strong>주문결제</strong>
+                    </p>
+                </nav>
+               <section>
+                   <form action="#">
+                       <div class="product">
+                       <table>
+                           <thead>
+                               <tr>
+                                   <th>상품명</th>
+                                   <th>총수량</th>
+                                   <th>판매가</th>
+                                   <th>포인트</th>
+                                   <th>배송비</th>
+                                   <th>소계</th>
+                               </tr>
+                           </thead>
+                           <tbody>
+                               <tr class="empty">
+                                   <td colspan="7">장바구니에 상품이 없습니다.</td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                       <article>
+                                           <a href="#">
+                                               <img src="../img/thumb-sample-t2.jpg" alt>
+                                           </a>
+                                           <div>
+                                               <h2>
+                                                   <a href="#">TH-블랙체크 셔츠 그레이2[면세]</a>
+                                               </h2>
+                                               <p>SIZE:M / COLOR: 블루 1개</p>
+                                           </div>
+                                       </article>
+                                   </td>
+                                   <td>1</td>
+                                   <td>27,000</td>
+                                   <td>270</td>
+                                   <td>무료배송</td>
+                                   <td>27,000</td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       <article>
+                                           <a href="#">
+                                               <img src="../img/thumb-sample-t3.jpg" alt>
+                                           </a>
+                                           <div>
+                                               <h2>
+                                                   <a href="#">TH-블랙체크 셔츠 그레이2[면세]</a>
+                                               </h2>
+                                               <p>SIZE:M / COLOR: 블루 1개</p>
+                                           </div>
+                                       </article>
+                                   </td>
+                                   <td>1</td>
+                                   <td>27,000</td>
+                                   <td>270</td>
+                                   <td>무료배송</td>
+                                   <td>27,000</td>
+                               </tr>
+                           </tbody>
+                       </table>
+                    </div>
+                    <section>
+                        <article class="delivery">
+                            <h1>배송정보</h1>
+                            <div class="user">
+                                <label>
+                                    주문자
+                                    <input type="text" name="name">
+                                </label>
+                                <label>
+                                    휴대폰
+                                    <input type="text" name="hp">
+                                    <span> - 포함입력</span>
+                                </label>
+                            </div>
+                            <div class="address">
+                                <label>
+                                    우편번호
+                                    <input type="text" name="zip" value="54321">
+                                    <input type="button" value="검색">
+                                </label>
+                                <label>
+                                    기본주소
+                                    <input type="text" name="addr1" class="addr" value="부산광역시 부산진구 신천대로 123">
+                                </label>
+                                <label>
+                                    상세주소
+                                    <input type="text" name="addr2" class="addr" value="더조은 직업학교 5층 501호">
+                                </label>
+                            </div>
+                        </article>
+                        <article class="discount">
+                            <h1>할인정보</h1>
+                            <div>
+                                <p>
+                                    "현재 포인트 : "
+                                    <span>7200</span>
+                                    "점"
+                                </p>
+                                <label>
+                                    <input type="text" name="point">
+                                    "점"
+                                    <input type="button" value="적용">
+                                </label>
+                                <span> 포인트 5,000점 이상이면 현금처럼 사용 가능합니다.</span>
+                            </div>
+                        </article>
+                        <article class="payment">
+                            <h1>결제방법</h1>
+                            <div>
+                                <span>신용카드</span>
+                                <p>
+                                    <label>
+                                        <input type="radio" name="payment" value="type1">
+                                        신용카드결제
+                                        <input type="radio" name="payment" value="type2">
+                                        체크카드결제
+                                    </label>
+                                </p>
+                            </div>
+                            <div>
+                                <span>계좌이체</span>
+                                <p>
+                                    <label>
+                                        <input type="radio" name="payment" value="type3">
+                                        실시간 계좌이체
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="payment" value="type4">
+                                        무통장 입금
+                                    </label>
+                                </p>
+                            </div>
+                            <div>
+                                <span>기타</span>
+                                <p>
+                                    <label>
+                                        <input type="radio" name="payment" value="type3">
+                                        휴대폰결제
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="payment" value="type4">
+                                        카카오페이
+                                        <img src="../img/ico_kakaopay.gif" alt="카카오페이">
+                                    </label>
+                                </p>
+                            </div>
+                        </article>
+                        <article class="alert">
+                            <ul>
+                                <li>
+                                    <span>
+                                        케이마켓의 모든 판매자는 안전거래를 위해 구매금액, 결제수단에 상관없이 모든거래에 대하여
+                                        케이마켓 유한책임회사의 구매안전서비스(에스크로)를 제공하고 있습니다.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        케이마켓 유한책임회사의 전자금융거래법에 의해 결제대금예치업 등록번호는 02-006-00008 입니다.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        등록여부는 금융감독원 홈페이지(www.fss.or.kr)의 업무자료>인허가업무안내>전자금융업등록현황에서 확인하실수 있습니다.
+                                    </span>
+                                </li>
+                            </ul>
+                        </article>
+                        <div class="info">
+                            <h2>최종결제 정보</h2>
+                            <table border="0">
+                                <tbody>
+                                    <tr>
+                                        <td>상품수</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>상품금액</td>
+                                        <td>27,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>할인금액</td>
+                                        <td>-1,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배송비</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>포인트</td>
+                                        <td>260</td>
+                                    </tr>
+                                    <tr>
+                                        <td>전체주문금액</td>
+                                        <td>26,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <input type="button" name value="결제하기"> 
+                        </div>
+                    </section>
+                   </form>
+               </section>
+            </section>
+        </main>
+        <footer>
+            <div class="bottom">
+                <div>
+                        <a href="#">회사소개</a>
+                        <a href="#">서비스이용약관</a>
+                        <a href="#">개인정보처리방침</a>
+                        <a href="#">전자금융거래약관</a>
+                </div>
+            </div>    
+            <div class="botlogo">
+                <div>
+                    <p><img src="../img/footer_logo.png" alt="로고"></p>
+                    <p>
+                        <strong>(주)KMARKET</strong><br />
+                        부산시 강남구 테헤란로 152 (역삼동 강남파이낸스센터)<br />
+                        대표이사 : 홍길동<br />
+                        사업자등록번호 : 220-81-83676 사업자정보확인<br />
+                        통신판매업신고 : 강남 10630호 Fax : 02-589-8842
+                    </p>
+                    <p>
+                        <strong>고객센터</strong><br />
+                        Tel : 1234-5678 (평일 09:00~18:00)<br />
+                        스마일클럽/SVIP 전용 : 1522-5700 (365일 09:00~18:00)<br />
+                        경기도 부천시 원미구 부일로 223(상동) 투나빌딩 6층<br />
+                        Fax : 051-123-4567 | Mail : kmarket@kmarket.co.kr<br />
+                    </p>
+                
+                </div>
+            </div>
+            <button type="button" id="top"><img src="../img/top.png" alt="상단이동"></button>
+        </footer>
+    </div>    
+</body>
+</html>

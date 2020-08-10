@@ -130,7 +130,6 @@ main {
     width: 1200px;
     height: auto;
     margin: 0 auto;
-    border: 1px solid red;
     overflow: hidden;
 }
 /* 왼쪽 카테고리 메뉴 */
@@ -212,9 +211,11 @@ main > section {
     font-family: 'Noto Sans KR', sans-serif;
 }
 main > section > section {
+    position: relative;
     width: 100%;
     height: auto;
     overflow: hidden;
+    box-sizing: border-box;
 }
 main > section > section > article {
     float: left;

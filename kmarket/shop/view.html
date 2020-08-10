@@ -46,6 +46,7 @@
     }
     #view > section > article {
         width: 100%;
+        height: 500px;
         box-sizing: border-box;
     }
     #view > section > .info > div {
@@ -158,7 +159,11 @@
       line-height: 22px;
       color: #5e636d;
     }
-    #view > section > .notice {}
+    #view > section > .notice {
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+    }
     #view article > nav {
       border-bottom: 1px solid #a4a9b0;
       padding: 6px 0;
@@ -171,22 +176,119 @@
       color: #1e2732;
       font-weight: bold;
       font-size: 16px;
+      margin-bottom: 6px;
     }
-    #view article > nav > p {
-      border-bottom: 1px solid #a4a9b0;
-      padding: 6px 0;
+    #view > section > article.notice > nav > p{
+      margin-top: 6px;
+    }
+   
+    #view > section > .detail {
+      height: 100%;
+      box-sizing: border-box;
+    }
+    #view .notice > table {
+      width: 100%;
+    }
+    #view > section > article.notice > table  tr > td {
+      padding: 5px 0 6px 21px;
+      font-size: 14px;
+      font-family: 'Noto Sans KR', dotum, sans-serif;
+    }
+    #view > section > article.notice > table  tr > td:nth-child(1){
+      width: 20%;
+      color: #222;
+    }
+    #view .notice > table:nth-of-type(2) {
+      border-top: 1px solid #ececec;
+    }
+    #view .notice > .notice {
+      margin: 20px 0;
+      padding: 21px 26px 20px 19px;
+      line-height: 20px;
+      font-size: 14px;
+      font-family: 'Noto Sans KR', dotum, sans-serif;
+      color: #757c8a;
+      background: #fafafa;
+      border-radius: 2px;
+    }
+    #view > section > .review {
+      height: 100%;
+      box-sizing: border-box;
+    }
+    .review > nav {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
       margin-bottom: 12px;
+      font-family: 'Noto Sans KR', dotum, sans-serif;
+      color: #1e2732;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    .review > ul {
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .review > ul > li {
+      padding-top: 16px;
+      border-bottom: 1px solid #ececec;
+      box-sizing: border-box;
+    }
+    .review > ul > li > div{
       overflow: hidden;
     }
-    #view > section > article {
-      display: block;
-      width: 100%;
-      box-sizing: border-box;
-      z-index: ;
+    .review > ul > li > div > h5{
+      width: 150px;
+      height: 20px;
+      font-size: 0px;
+      background-image: url(../img/ico_rating_star.png);
+      background-repeat: no-repeat;
+      text-indent: 86px;
     }
-    #view > section > .detail {}
-    #view > section > .notice {}
-   
+    .review > ul > li > div > span {
+      float: right;
+    }
+    .review > ul > li > h3 {
+      color: #555;
+    }
+    .review > ul > li > p {
+      width: 100%;
+      height: 60px;
+      color: #555;
+      font-size: 14px;
+      line-height: 19px;
+      word-break: break-all;
+      margin-top: 10px;
+      font-family: 'Noto Sans KR', dotum, sans-serif;
+    }
+    #view > section > .paging {
+        width: 100%;
+        margin-top: 30px;
+        text-align: center;
+    }
+    #view > section > .paging > span > a {
+        color: #777;
+        font-size: 11px;
+    }
+    #view > section > .paging > span > a:hover {text-decoration: underline;}
+    #view > section > .paging > .num > a {
+      display: inline-block;
+      min-width: 14px;
+      margin: 0 2px;
+      padding: 8px 9px;
+      border: 1px solid #c4c4c4;
+      color: #000;
+      font-size: 12px;
+      text-align: center;
+      text-decoration: none;
+    }
+    #view > section > .paging > .num > a:hover {
+        border: 1px solid #454c5f;
+        text-decoration: none;
+    }
+    #view > section > .paging > .num > a.on {
+      color: #fe434c;
+      font-weight: bold;
+    }
     </style>
 </head>
 <body>
@@ -324,6 +426,7 @@
                       <h1>상품정보</h1>
                     </nav>
                     <img src="../img/sample_detail1.jpg" alt="상품정보" />
+                    <img src="../img/sample_detail2.jpg" alt="상품정보" />
                    </article>
                   </article>
                   <article class="notice">
@@ -416,30 +519,82 @@
                     </p>
                   </article>
                   <article class="review">
-                    <nav>
-                      <h1>상품리뷰</h1>
-                    </nav>
-                    <div>
-                        <img src="../img/sample-review.png" alt="상품리뷰">
-                    </div>
-                    <div class="paging">
-                      <span class="prev">
-                        <a href="#"><&nbsp;이전</a>
-                      </span>
-                      <span class="num">
-                        <a href="#" class="on">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
-                        <a href="#">6</a>
-                        <a href="#">7</a>
-                      </span>
-                      <span class="next">
-                        <a href="#">다음&nbsp;></a>
-                      </span>
-                    </div>
-                  </article>
+                    <nav>상품리뷰</nav>
+                    <ul>
+                        <li>
+                            <div>
+                                <h5 class="rating_star4"></h5>
+                                <span>seo****** 2018-07-10</span>
+                            </div>
+                            <h3>상품명1/BLUE/L</h3>
+                            <p>
+                                가격대비 정말 괜찮은 옷이라 생각되네요 핏은 음...제가 입기엔 어깨선이 맞고 루즈핏이라 하기도 좀 힘드네요. 아주 약간 루즈한정도...?그래도 이만한 옷은 없다<br/>
+                                고 봅니다 깨끗하고 포장도 괜찮고 다음에도 여기서 판매하는 제품들을 구매하고 싶네요 정말 만족하고 후기 남깁니다 많이 파시길 바래요 ~ ~ ~
+                            </p>
+                        </li>
+                        <li>
+                            <div>
+                                <h5 class="rating_star4"></h5>
+                                <span>seo****** 2018-07-10</span>
+                            </div>
+                            <h3>상품명1/BLUE/L</h3>
+                            <p>
+                                가격대비 정말 괜찮은 옷이라 생각되네요 핏은 음...제가 입기엔 어깨선이 맞고 루즈핏이라 하기도 좀 힘드네요. 아주 약간 루즈한정도...?그래도 이만한 옷은 없다<br/>
+                                고 봅니다 깨끗하고 포장도 괜찮고 다음에도 여기서 판매하는 제품들을 구매하고 싶네요 정말 만족하고 후기 남깁니다 많이 파시길 바래요 ~ ~ ~
+                            </p>
+                        </li>
+                        <li>
+                            <div>
+                                <h5 class="rating_star4"></h5>
+                                <span>seo****** 2018-07-10</span>
+                            </div>
+                            <h3>상품명1/BLUE/L</h3>
+                            <p>
+                                가격대비 정말 괜찮은 옷이라 생각되네요 핏은 음...제가 입기엔 어깨선이 맞고 루즈핏이라 하기도 좀 힘드네요. 아주 약간 루즈한정도...?그래도 이만한 옷은 없다<br/>
+                                고 봅니다 깨끗하고 포장도 괜찮고 다음에도 여기서 판매하는 제품들을 구매하고 싶네요 정말 만족하고 후기 남깁니다 많이 파시길 바래요 ~ ~ ~
+                            </p>
+                        </li>
+                        <li>
+                            <div>
+                                <h5 class="rating_star4"></h5>
+                                <span>seo****** 2018-07-10</span>
+                            </div>
+                            <h3>상품명1/BLUE/L</h3>
+                            <p>
+                                가격대비 정말 괜찮은 옷이라 생각되네요 핏은 음...제가 입기엔 어깨선이 맞고 루즈핏이라 하기도 좀 힘드네요. 아주 약간 루즈한정도...?그래도 이만한 옷은 없다<br/>
+                                고 봅니다 깨끗하고 포장도 괜찮고 다음에도 여기서 판매하는 제품들을 구매하고 싶네요 정말 만족하고 후기 남깁니다 많이 파시길 바래요 ~ ~ ~
+                            </p>
+                        </li>
+                        <li>
+                            <div>
+                                <h5 class="rating_star4"></h5>
+                                <span>seo****** 2018-07-10</span>
+                            </div>
+                            <h3>상품명1/BLUE/L</h3>
+                            <p>
+                                가격대비 정말 괜찮은 옷이라 생각되네요 핏은 음...제가 입기엔 어깨선이 맞고 루즈핏이라 하기도 좀 힘드네요. 아주 약간 루즈한정도...?그래도 이만한 옷은 없다<br/>
+                                고 봅니다 깨끗하고 포장도 괜찮고 다음에도 여기서 판매하는 제품들을 구매하고 싶네요 정말 만족하고 후기 남깁니다 많이 파시길 바래요 ~ ~ ~
+                            </p>
+                        </li>
+                    </ul>
+                </article>
+                <div class="paging">
+                  <span class="prev">
+                    <a href="#"><&nbsp;이전</a>
+                  </span>
+                  <span class="num">
+                    <a href="#" class="on">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">7</a>
+                  </span>
+                  <span class="next">
+                    <a href="#">다음&nbsp;></a>
+                  </span>
+                </div>
                </section>
             </section>
         </main>
