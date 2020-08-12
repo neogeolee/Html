@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="./js/aside.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
@@ -20,109 +21,11 @@
         });
       </script>
     <style>
-      /* 베스트 배너 */
-    aside > .best {
-        width: 215px;
-        overflow: hidden;
-        box-sizing: border-box;
-        border: 1px solid #dbdbdb;
-        background: #fff;
-        margin-bottom: 20px;
-        box-shadow: 0 0  5px rgba(55, 55, 5, 0.2);
-    }
-    aside > .best > h1 {
-        font-family: 'Noto Sans KR', sans-serif;
-        font-size: 16px;
-        color: #111;
-        margin: 6px;
-    }
-    aside > .best > ol > li {
-        width: 100%;
-        height: 100%;
-        padding: 0 6px;
-        box-sizing: border-box;
-        margin-bottom: 16px;
-    }
-    aside > .best > ol > li > a {
-        display: block;
-        width: 100%;
-        height: 50px;
-    }
-    aside > .best > ol > li:first-child > a {
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-    aside > article > ol > li:first-child > a > div.thumb {
-        position: relative;
-        float: none;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        margin: 0 auto;
-    }
-    aside > article > ol > li> a > div.thumb {
-        position: relative;
-        float: left;
-        width: 50px;
-        height: 50px;
-        overflow: hidden;
-        margin: 0 auto;
-    }
-    aside > article > ol > li > a > div.thumb > i {
-        position: absolute;
-        left: 0;
-        top: 0;
-        display: inline-block;
-        width: 16px;
-        height: 20px;
-        font-size: 16px;
-        padding: 0;
-        color: #ef3e42;
-        border-bottom: 1px solid #ef3e42;
-        font-family: 'Noto Sans KR', sans-serif;
-        font-weight: 500;
-        font-style: italic;
-        text-align: center;
-        line-height: 18px;
-    }
-    aside > article > ol > li > a > div.thumb > img {
-        width: 100%;
-    }
-    aside > article > ol > li > a h2 {
-        margin-top: 4px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-    }
-    aside > article > ol > li > a .og_price > del {
-        font-size: 10px;
-        color: #aaa;
-    }
-    aside > article > ol > li > a .og_price > span {
-        font-size: 10px;
-        color: #eb000a;
-    }
-    aside > article > ol > li > a .dis_price > ins {
-        font-size: 14px;
-        text-decoration: none;
-    }
+    
     
     </style>
     <script>
-        $(function(){
-            var best = $('aside > .best');
-            $(window).scroll(function(){
-                var t = $(this).scrollTop();
-                if(t > 620){
-                    best.css({'position':'fixed',
-                              'top':'0'
-                            })
-                }else{
-                    best.css({'position':'static'})
-                }
-            });
-        });
+       
     </script>
 </head>
 <body>

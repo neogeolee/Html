@@ -7,153 +7,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="../js/aside.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css" />
     <style>
-    #cart {
-        float: right;
-        width: 985px;
-        height: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-    #cart > nav {
-        width: 100%;
-        height: 36px;
-        border-bottom: 1px solid #000;
-        box-sizing: border-box;
-      }
-      #cart > nav > h1 {
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 1;
-        font-family: 'Noto Sans KR', sans-serif;
-      }
-      #cart > nav > p {
-        float: right;
-        margin-top: -10px;
-      }
-      #cart > nav > p > strong {
-        font-weight: bold;
-      }
-      #cart form > table {
-          width: 100%;
-          border-bottom: 1px solid #d3d3d3;
-          border-spacing: 0;
-          margin-top: 20px;
-      }
-      #cart > section > form > table > thead > tr > th:nth-child(1) {
-          width: 60px;
-      }
-      #cart > section > form > table > thead > tr > th {
-          padding: 12px 0;
-          border-top: 2px solid #000;
-          border-bottom: 1px solid #d3d3d3;
-          background: #fff;
-          color: #383838;
-          font-size: 12px;
-          text-align: center;
-          letter-spacing: 0;
-      }
-      #cart > section > form > table > tbody > tr.empty {
-          display: none;
-      }
-      #cart > section > form > table > tbody > tr:nth-child(2) > td:nth-child(1) {
-          width: 60px;
-      }
-      #cart > section > form > table > tbody > tr:nth-child(2) > td {
-          text-align: center;
-      }
-      #cart > section > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > article {
-          overflow: hidden;
-      }
-      #cart > section > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > article > a {
-          float: left;
-          display: inline-block;
-      }
-      #cart > section > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > article > a > img {
-          width: 80px;
-      }
-      #cart > section > form > table td > article > div {
-          float: left;
-          margin-top: 10px;
-      }
-      #cart > section > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > article > div > h2 > a {
-          font-size: 15px;
-          color: #111;
-      }
-      #cart > section > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > article > div > p {
-          text-align: left;
-          color: #777;
-          margin-top: 4px;
-      }
-      #cart > section > form > table > tbody > tr:nth-child(2) > td:nth-child(7) {
-          color: #ff006c;
-          font-weight: bold;
-      }
-      #cart > section > form > input[name=del] {
-          border-color: #bdbdbd;
-          border-bottom-color: #828282;
-          background: #fafafa;
-          color: #4d4d4d;
-          padding: 6px 11px;
-          border-width: 1px;
-          margin-top: 6px;
-      }
-      #cart > .info {
-          float: right;
-          width: 360px;
-          height: 412px;
-          padding: 20px;
-          background: #fff;
-          border: 1px solid #d3d3d3;
-          box-sizing: border-box;
-      }
-      #cart > .info > h2 {
-          width: 100%;
-          font-weight: bold;
-          font-size: 16px;
-          border-bottom: 1px solid #111;
-          margin-bottom: 10px;
-          padding-bottom: 10px;
-          box-sizing: border-box;
-          color: #1e1e1e;
-      }
-      #cart > .info > table {
-          width: 100%;
-      }
-      #cart > .info > table > tbody > tr > td {
-          padding: 10px 0;
-          font-size: 14px;
-          font-weight: bold;
-          color: #555;
-      }
-      #cart > .info > table > tbody > tr > td:last-child {
-          text-align: right;
-      }
-      #cart > div > table > tbody > tr:last-child > td {
-          font-size: 20px;
-      }
-      #cart > div > table > tbody > tr:last-child > td:nth-child(2) {
-          color: #ff006c;
-          font-size: 20px;
-          font-weight: bold;
-      }
-      #cart > div > input[type=button] {
-          width: 100%;
-          height: 56px;
-          font-size: 26px;
-          border-width: 1px;
-          border-color: #d81818;
-          border-bottom-color: #9e1212;
-          background: #ed2f2f;
-          color: #fff;
-          box-sizing: border-box;
-          margin-top: 10px;
-      }
+    
 
     </style>
 </head>
@@ -239,6 +100,91 @@
                         </ol>
                     </li>
                 </ul>
+                <article class="best">
+                    <h1><i class="fas fa-crown"></i>베스트상품</h1>
+                    <ol>
+                        <li>
+                            <a href="#">
+                                <div class="thumb">
+                                    <i>1</i>
+                                    <img src="../img/thumb-popular-item1.jpg" alt="item1">
+                                </div>
+                                <h2>TH-파스텔드레스셔츠 - 그린</h2>
+                                <div class="og_price">
+                                    <del>30,000</del>
+                                    <span>10%↓</span>
+                                </div>
+                                <div class="dis_price">
+                                    <ins>27,000</ins>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="thumb">
+                                    <i>2</i>
+                                    <img src="../img/thumb-sample-t2.jpg" alt="item1">
+                                </div>
+                                <h2>TH-파스텔드레스셔츠 - 그린</h2>
+                                <div class="og_price">
+                                    <del>30,000</del>
+                                    <span>10%↓</span>
+                                </div>
+                                <div class="dis_price">
+                                    <ins>27,000</ins>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="thumb">
+                                    <i>3</i>
+                                    <img src="../img/thumb-sample-t3.jpg" alt="item1">
+                                </div>
+                                <h2>TH-파스텔드레스셔츠 - 그린</h2>
+                                <div class="og_price">
+                                    <del>30,000</del>
+                                    <span>10%↓</span>
+                                </div>
+                                <div class="dis_price">
+                                    <ins>27,000</ins>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="thumb">
+                                    <i>4</i>
+                                    <img src="../img/thumb-sample-t4.jpg" alt="item1">
+                                </div>
+                                <h2>TH-파스텔드레스셔츠 - 그린</h2>
+                                <div class="og_price">
+                                    <del>30,000</del>
+                                    <span>10%↓</span>
+                                </div>
+                                <div class="dis_price">
+                                    <ins>27,000</ins>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="thumb">
+                                    <i>5</i>
+                                    <img src="../img/thumb-sample-t5.jpg" alt="item1">
+                                </div>
+                                <h2>TH-파스텔드레스셔츠 - 그린</h2>
+                                <div class="og_price">
+                                    <del>30,000</del>
+                                    <span>10%↓</span>
+                                </div>
+                                <div class="dis_price">
+                                    <ins>27,000</ins>
+                                </div>
+                            </a>
+                        </li>
+                    </ol>
+                </article>
             </aside>
             <!-- 장바구니 -->
             <section id="cart">

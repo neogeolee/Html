@@ -1,0 +1,470 @@
+ /* 초기화 */
+ *{
+    margin: 0;
+    padding: 0;
+    font: normal 12px '고딕';
+}
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #111;}
+#admin-wrapper {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+/* 헤더 영역*/
+header {
+    width: 100%;
+    height: 120px;
+    background: url('../img/admin_bg_header.jpg') repeat-x;
+}
+header > div {
+    margin: 0 auto;
+    width: 1400px;
+    height: 100%;
+}
+header > div > img {
+    float: left;
+    margin-top: 40px;
+}
+header > div > p {
+    float: right;
+    margin-top: 40px;
+    color: #fff;
+}
+header > div > p > span {
+    margin-right: 16px;
+}
+header > div > p > a {
+    color: #fff;
+}
+
+/* 메인 -공통 영역*/
+main {
+    width: 1400px;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+main > aside {
+    float: left;
+    width: 270px;
+    height: auto;
+    background: url('../img/admin_bg_aside.jpg') repeat-y;
+    border-left: 1px solid #c0c0c0;
+    box-sizing: border-box;
+}
+#gnb {
+    width: 100%;
+    height: auto;
+}
+#gnb > li {
+    width: 100%;
+    min-height: 66px;
+    border-top: 1px solid #c0c0c0;
+    box-sizing: border-box;
+}
+#gnb > li:last-child {
+    border-bottom: 1px solid #c0c0c0;
+}
+#gnb > li > a {
+    display: block;
+    width: 100%;
+    height: 66px;
+    font-size: 13px;
+    font-weight: bold;
+    text-indent: 24px;
+    color: #555;
+    line-height: 66px;
+}
+#gnb > li > a > i {
+    margin-right: 10px;
+    font-size: 20px;
+    text-indent: 0px;
+}
+#gnb ol {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+#gnb ol > li {
+    width: 100%;
+    height: 32px;
+}
+#gnb ol > li > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+main > section {
+    float: right;
+    width: 1130px;
+    min-height: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+/* 첫화면 메인 -index */
+#main {
+
+}
+#main > nav {
+    position: relative;
+    width: 100%;
+    height: 46px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #c0c0c0;
+    box-sizing: border-box;
+}
+#main > nav > h3 {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#main > nav > p {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+#main > nav > p > strong {
+    font-weight: bold;
+}
+#main h4 {
+    font-size: 16px;
+}
+#main > article {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+#main > article > table {
+    width: 100%;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border-collapse: collapse;
+    border-top: 2px solid #8798a3;
+}
+#main > article > table td {
+    width: 20%;
+    text-align: center;
+    color: #111;
+}
+#main > article > table tr:nth-child(1) {
+    background: #fafafa;
+}
+#main > article > table tr > td {
+    border: 1px solid #e5e5e5;
+    padding: 6px 6px 6px 12px;
+}
+#main > article > table tr:nth-child(1) > td > strong {
+    display: block;
+    font-size: 16px;
+    padding-top: 10px;
+}
+#main > article > table tr:nth-child(1) > td > span {
+    display: block;
+    font-size: 16px;
+    padding: 16px;
+    font-weight: bold;
+}
+#main > article > table td > p {
+    padding: 6px;
+    overflow: hidden;
+}
+#main > article > table td > p > span:nth-child(1) {
+    float: left;
+}
+#main > article > table td > p > span:nth-child(2) {
+    float: right;
+}
+#main > div {
+    margin-bottom: 26px;
+    overflow: hidden;
+}
+#main > div > div:nth-child(1) {
+    float: left;
+}
+#main > div > div:nth-child(2) {
+    float: right;
+}
+#main > div .notice {
+    padding: 16px;
+    margin-top: 6px;
+    border: 1px solid #e5e5e5;
+    border-top: 2px solid #8798a3;
+    box-sizing: border-box;
+}
+#main > div .notice > p {
+    line-height: 26px;
+    overflow: hidden;
+}
+#main > div .notice > p > span {
+    margin-bottom: 8px;
+}
+#main > div .notice > p > span:nth-child(1) {
+    float: left;
+    display: block;
+    width: 400px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    overflow: hidden;
+}
+#main > div .notice > p > span:nth-child(2) {
+    float: right;
+}
+#main > div > article > table {}
+
+/* 상품등록 : product-register */
+#product-register {
+    float: right;
+    position: relative;
+    width: 1130px;
+    min-height: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#product-register > nav {
+    position: relative;
+    width: 100%;
+    height: 46px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #c0c0c0;
+    box-sizing: border-box;
+}
+#product-register > nav > h3 {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#product-register > nav > p {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+#product-register > nav > p > strong {
+    font-weight: bold;
+}
+#product-register h4 {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+#product-register section > p {
+    background: #eaeaea;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+#product-register section > table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#product-register section > table tr > td:nth-child(1) {
+    width: 160px;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    background: #f6f6f6;
+    padding: 10px;
+    text-align: left;
+}
+#product-register section > table tr > td:nth-child(2) {
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 10px;
+    text-align: left;
+}
+#product-register section > table tr > td > span {
+    color: #bc2e13;
+    display: block;
+}
+#product-register select {
+    width: 150px;
+    padding: 6px;
+    border: 1px solid #959595;
+    font-size: 13px;
+    color: #333;
+    box-sizing: border-box;
+}
+#product-register input {
+    width: 200px;
+    padding: 6px;
+    border: 1px solid #959595;
+    font-size: 13px;
+    color: #333;
+    box-sizing: border-box;
+}
+#product-register input[type=submit] {
+    float: right;
+    margin-top: 10px;
+    width: 100px;
+    height: auto;
+    background: #fefefe;
+}
+#product-register .alert {
+    box-sizing: border-box;
+    padding-left: 50px;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 58px;
+    width: auto;
+    height: 58px;
+    border: 1px solid #fdd845;
+    margin-top: 60px;
+    background: #fff6bf url('../img/admin_ico_alert.png') no-repeat scroll 15px 16px;
+    
+}
+
+/* 상품등록 : product-list */
+#product-list {
+    float: right;
+    position: relative;
+    width: 1130px;
+    min-height: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#product-list > nav {
+    position: relative;
+    width: 100%;
+    height: 46px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #c0c0c0;
+    box-sizing: border-box;
+}
+#product-list > nav > h3 {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#product-list > nav > p {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+#product-list > nav > p > strong {
+    font-weight: bold;
+}
+#product-list > section > div {
+    margin-bottom: 20px;
+}
+#product-list > section > div > select {
+    width: 150px;
+    padding: 6px;
+    border: 1px solid #959595;
+    font-size: 13px;
+    background: #fefefe;
+    color: #333;
+    box-sizing: border-box;
+}
+#product-list > section > div > input {
+    width: 200px;
+    padding: 6px;
+    border: 1px solid #959595;
+    font-size: 13px;
+    background: #fefefe;
+    color: #333;
+    box-sizing: border-box;
+}
+#product-list section > table {
+    width: 100%;
+    border-top: 2px solid #8798a3;
+    border-collapse: collapse;
+}
+#product-list section > table td:nth-child(1) {
+    width: 20px;
+}
+#product-list section > table td:nth-child(2) {
+    width: 80px;
+}
+#product-list section > table td:nth-child(4) {
+    text-align: left;
+}
+#product-list section > table img {
+    width: 60px;
+}
+#product-list section > table tr > th {
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    background: #f6f6f6;
+    padding: 10px;
+    font-weight: bold;
+}
+#product-list section > table tr > td {
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+#product-list > section > input[type=button] {
+    float: left;
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #e6e6e6;
+    background: #fefefe;
+}
+#product-list .paging {
+    width: 100%;
+    margin-top: 60px;
+    text-align: center;
+}   
+#product-list .paging > span > a {
+    color: #777;
+    font-size: 11px;
+}
+#product-list .paging > span > a:hover {text-decoration: underline;}
+#product-list .paging > .num > a {
+    display: inline-block;
+    min-width: 14px;
+    margin: 0 2px;
+    padding: 8px 9px;
+    border: 1px solid #c4c4c4;
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+}
+#product-list .paging > .num > a:hover {
+    border: 1px solid #454c5f;
+    text-decoration: none;
+}
+#product-list .paging > .num > a.on {
+    color: #fe434c;
+    font-weight: bold;
+}
+#product-list .alert {
+    box-sizing: border-box;
+    padding-left: 50px;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 58px;
+    width: auto;
+    height: 58px;
+    border: 1px solid #8497bf;
+    margin-top: 60px;
+    background: #a8b2c5 url('../img/admin_ico_info.png') no-repeat scroll 15px 16px;
+}
+
+/* 푸터 영역*/
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: #0d3a46;
+}
+footer > div {
+    width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+}
+footer > div > p {
+    color: #fff;
+    padding-top: 22px;
+    font-weight: bold;
+    box-sizing: border-box;
+}

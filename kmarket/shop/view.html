@@ -7,288 +7,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="../js/aside.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css" />
     <style>
-    #view {
-    float: right;
-    display: block;
-    width: 985px;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box; 
-    }
-    #view > nav {
-        width: 100%;
-        height: 36px;
-        border-bottom: 1px solid #000;
-        box-sizing: border-box;
-    }
-    #view > nav > h1 {
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 1;
-        font-family: 'Noto Sans KR', sans-serif;
-    }
-    #view > nav > p  {
-        float: right;
-        margin-top: -10px;
-    }
-    #view > nav > p > span {}
-    #view > nav > p > strong {
-        font-weight: bold;
-    }
-    #view > section {
-        margin-top: 10px;
-    }
-    #view > section > article {
-        width: 100%;
-        height: 500px;
-        box-sizing: border-box;
-    }
-    #view > section > .info > div {
-        float: left;
-        width: 50%;
-        height: 100%;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-    #view > section > .info > .image > img {
-        width: 100%;
-    }
-    #view > section > .info > .product > nav {
-        border-bottom: 1px solid #eaeaea;
-        padding-bottom: 10px;
-        margin-bottom: 12px;
-        overflow: hidden;
-    }
-    #view > section > .info > .product > nav > h1 {
-        float: left;
-        color: #1e2732;
-        font-weight: bold;
-        font-size: 16px;
-        font-family: 'Noto Sans KR', sans-serif;
-    }
-    #view > section > .info > .product > nav > h2 {
-        float: right;
-        color: #777;
-        margin-top: 8px;
-        font-family: 'Noto Sans KR', sans-serif;
-    }
-    #view > section > .info > .product > p {
-        font-size: 18px;
-        font-family: 'Noto Sans KR', sans-serif;
-    }
-    #view > section > .info > .product > nav > h5 > a {
-        color: blue;
-        font-family: 'Noto Sans KR', sans-serif;
-        text-decoration: underline;
-    }
-    #view > section > .info > .product > nav > .og_price {
-        margin-bottom: 3px;
-    }
-    #view > section > .info > .product > nav > .og_price > del {
-        font-size: 25px;
-        font-family: 'Noto Sans KR', sans-serif;
-        color: #aaa;
-    }
-    #view > section > .info > .product > nav > .og_price > span {
-        margin-left: 6px;
-        font-size: 16px;
-        font-weight: bold;
-        color: #eb000a;
-    }
-    #view > section > .info > .product > nav > .dis_price {
-        
-    }
-    #view > section > .info > .product > nav > .dis_price > ins {
-        font-size: 30px;
-        font-weight: bold;
-        font-family: 'Noto Sans KR', sans-serif;
-        text-decoration: none;
-    }
-    #view > section > .info > .product .delivery {
-        font-size: 16px;
-        font-weight: bold;
-        font-family: 'Noto Sans KR', sans-serif;
-        color: #2e8de5
-    }
-    #view > section > .info > .product .arrive {
-        font-size: 14px;
-        font-weight: bold;
-        font-family: 'Noto Sans KR', sans-serif;
-        margin-left: 10px;
-        margin-bottom: 8px;
-    }
-    #view > section > .info > .product .domestic {
-        display: block;
-        color: #aaa;
-        font-family: 'Noto Sans KR', sans-serif;
-    }
-    #view > section > .info > .product .card > span > i {
-      display: inline-block;
-      width: 30px;
-      height: 18px;
-      top: 4px;
-      font-size: 0;
-      vertical-align: text-top;
-      margin-right: 2px;
-    }
-    #view > section > .info > .product .origin {
-      font-size: 16px;
-      font-weight: bold;
-      font-family: 'Noto Sans KR', sans-serif;
-    }
-    #view > section > .info > .product .banner {
-      width: 100%;
-    }
-    #view > section > .info > .product .total {
-      overflow: hidden;
-      margin-top: 16px;
-    }
-    #view > section > .info > .product .total > span {
-      float: right;
-      display: block;
-      width: 100px;
-      height: 22px;
-      padding: 10px 0 0;
-      font-size: 16px;
-      line-height: 22px;
-      color: #5e636d;
-    }
-    #view > section > .notice {
-      height: 100%;
-      width: 100%;
-      box-sizing: border-box;
-    }
-    #view article > nav {
-      border-bottom: 1px solid #a4a9b0;
-      padding: 6px 0;
-      margin-bottom: 12px;
-      overflow: hidden;
-    }
-    #view article > nav > h1 {
-      float: left;
-      font-family: 'Noto Sans KR', sans-serif;
-      color: #1e2732;
-      font-weight: bold;
-      font-size: 16px;
-      margin-bottom: 6px;
-    }
-    #view > section > article.notice > nav > p{
-      margin-top: 6px;
-    }
    
-    #view > section > .detail {
-      height: 100%;
-      box-sizing: border-box;
-    }
-    #view .notice > table {
-      width: 100%;
-    }
-    #view > section > article.notice > table  tr > td {
-      padding: 5px 0 6px 21px;
-      font-size: 14px;
-      font-family: 'Noto Sans KR', dotum, sans-serif;
-    }
-    #view > section > article.notice > table  tr > td:nth-child(1){
-      width: 20%;
-      color: #222;
-    }
-    #view .notice > table:nth-of-type(2) {
-      border-top: 1px solid #ececec;
-    }
-    #view .notice > .notice {
-      margin: 20px 0;
-      padding: 21px 26px 20px 19px;
-      line-height: 20px;
-      font-size: 14px;
-      font-family: 'Noto Sans KR', dotum, sans-serif;
-      color: #757c8a;
-      background: #fafafa;
-      border-radius: 2px;
-    }
-    #view > section > .review {
-      height: 100%;
-      box-sizing: border-box;
-    }
-    .review > nav {
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 10px;
-      margin-bottom: 12px;
-      font-family: 'Noto Sans KR', dotum, sans-serif;
-      color: #1e2732;
-      font-weight: bold;
-      font-size: 1.5em;
-    }
-    .review > ul {
-      padding: 10px;
-      box-sizing: border-box;
-    }
-    .review > ul > li {
-      padding-top: 16px;
-      border-bottom: 1px solid #ececec;
-      box-sizing: border-box;
-    }
-    .review > ul > li > div{
-      overflow: hidden;
-    }
-    .review > ul > li > div > h5{
-      width: 150px;
-      height: 20px;
-      font-size: 0px;
-      background-image: url(../img/ico_rating_star.png);
-      background-repeat: no-repeat;
-      text-indent: 86px;
-    }
-    .review > ul > li > div > span {
-      float: right;
-    }
-    .review > ul > li > h3 {
-      color: #555;
-    }
-    .review > ul > li > p {
-      width: 100%;
-      height: 60px;
-      color: #555;
-      font-size: 14px;
-      line-height: 19px;
-      word-break: break-all;
-      margin-top: 10px;
-      font-family: 'Noto Sans KR', dotum, sans-serif;
-    }
-    #view > section > .paging {
-        width: 100%;
-        margin-top: 30px;
-        text-align: center;
-    }
-    #view > section > .paging > span > a {
-        color: #777;
-        font-size: 11px;
-    }
-    #view > section > .paging > span > a:hover {text-decoration: underline;}
-    #view > section > .paging > .num > a {
-      display: inline-block;
-      min-width: 14px;
-      margin: 0 2px;
-      padding: 8px 9px;
-      border: 1px solid #c4c4c4;
-      color: #000;
-      font-size: 12px;
-      text-align: center;
-      text-decoration: none;
-    }
-    #view > section > .paging > .num > a:hover {
-        border: 1px solid #454c5f;
-        text-decoration: none;
-    }
-    #view > section > .paging > .num > a.on {
-      color: #fe434c;
-      font-weight: bold;
-    }
     </style>
 </head>
 <body>
@@ -373,6 +99,91 @@
                         </ol>
                     </li>
                 </ul>
+                <article class="best">
+                  <h1><i class="fas fa-crown"></i>베스트상품</h1>
+                  <ol>
+                      <li>
+                          <a href="#">
+                              <div class="thumb">
+                                  <i>1</i>
+                                  <img src="../img/thumb-popular-item1.jpg" alt="item1">
+                              </div>
+                              <h2>TH-파스텔드레스셔츠 - 그린</h2>
+                              <div class="og_price">
+                                  <del>30,000</del>
+                                  <span>10%↓</span>
+                              </div>
+                              <div class="dis_price">
+                                  <ins>27,000</ins>
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <div class="thumb">
+                                  <i>2</i>
+                                  <img src="../img/thumb-sample-t2.jpg" alt="item1">
+                              </div>
+                              <h2>TH-파스텔드레스셔츠 - 그린</h2>
+                              <div class="og_price">
+                                  <del>30,000</del>
+                                  <span>10%↓</span>
+                              </div>
+                              <div class="dis_price">
+                                  <ins>27,000</ins>
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <div class="thumb">
+                                  <i>3</i>
+                                  <img src="../img/thumb-sample-t3.jpg" alt="item1">
+                              </div>
+                              <h2>TH-파스텔드레스셔츠 - 그린</h2>
+                              <div class="og_price">
+                                  <del>30,000</del>
+                                  <span>10%↓</span>
+                              </div>
+                              <div class="dis_price">
+                                  <ins>27,000</ins>
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <div class="thumb">
+                                  <i>4</i>
+                                  <img src="../img/thumb-sample-t4.jpg" alt="item1">
+                              </div>
+                              <h2>TH-파스텔드레스셔츠 - 그린</h2>
+                              <div class="og_price">
+                                  <del>30,000</del>
+                                  <span>10%↓</span>
+                              </div>
+                              <div class="dis_price">
+                                  <ins>27,000</ins>
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <div class="thumb">
+                                  <i>5</i>
+                                  <img src="../img/thumb-sample-t5.jpg" alt="item1">
+                              </div>
+                              <h2>TH-파스텔드레스셔츠 - 그린</h2>
+                              <div class="og_price">
+                                  <del>30,000</del>
+                                  <span>10%↓</span>
+                              </div>
+                              <div class="dis_price">
+                                  <ins>27,000</ins>
+                              </div>
+                          </a>
+                      </li>
+                  </ol>
+              </article>
             </aside>
             <section id="view">
                <nav>
