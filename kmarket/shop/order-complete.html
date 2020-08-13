@@ -48,6 +48,9 @@
             color: #555;
             padding: 10px;
         }
+        #order-complete > section > div > h2 > i {
+            font-size: 25px;
+        }
         #order-complete > section > div > p {
             font-size: 18px;
             font-weight: bold;
@@ -75,7 +78,7 @@
         #order-complete table tr {
             border-bottom: 1px solid #d3d3d3;
         }
-        #order-complete table tr > td {
+        #order-complete .product table tr > td {
             text-align: center;
         }
         #order-complete table tr > th {
@@ -85,6 +88,9 @@
             font-size: 11px;
             text-align: center;
         }
+        #order-complete table tr > th:last-child {
+            width: 200px;
+        }
         #order-complete .product table tr > td img {
             float: left;
             width: 80px;
@@ -93,6 +99,95 @@
             float: left;
             margin-top: 10px;
             text-align: left;
+        }
+        #order-complete .product .total > td > table {
+            border: none;
+            margin-top: 0px;
+        }
+        #order-complete .product .total > td > table tr {
+            border: none;
+        }
+        #order-complete .product .total > td > table tr:last-child span {
+            font-weight: bold;
+            color: #ff006c;
+        }
+        #order-complete .product .total > td > table td {
+            text-align: right;
+            color: #111;
+            background: #f2f2f2;
+            font-weight: normal;
+            border-bottom: none;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        #order-complete .order table tr > td {
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        #order-complete .order table span {
+            font-weight: bold;
+            color: #ff006c;
+        }
+        #order-complete .order table tr > td:nth-child(1) {
+            width: 160px;
+            background: #f2f2f2;
+        }
+        #order-complete .order table tr > td:nth-child(2) {
+            width: auto;
+        }
+        #order-complete .order table tr > td:nth-child(3) {
+            width: 100px;
+            text-align: right;
+            vertical-align: top;
+            background: #f2f2f2;
+        }
+        #order-complete .order table tr > td:nth-child(4) {
+            width: 100px;
+            text-align: right;
+            vertical-align: top;
+            background: #f2f2f2;
+        }
+        #order-complete .delivery table tr > td {
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        #order-complete .delivery table tr > td:nth-child(1) {
+            width: 160px;
+            background: #f2f2f2;
+        }
+        #order-complete .delivery table tr > td:nth-child(2) {
+            width: auto;
+        }
+        #order-complete .delivery table tr > td:nth-child(3) {
+            width: 200px;
+            background: #f2f2f2;
+        }
+        #order-complete .delivery table tr > td:nth-child(4) {
+            width: 200px;
+            background: #f2f2f2;
+        }
+        #order-complete .alert {
+            width: 100%;
+            background: #f7f7f7;
+            padding: 10px;
+            padding-left: 24px;
+            color: #999;
+            box-sizing: border-box;
+        }
+        #order-complete .alert > h1 {
+            font-size: 15px;
+            margin-left: -5px;
+            margin-bottom: 3px;
+        }
+        #order-complete .alert > ul {
+            list-style: inherit;
+        }
+        #order-complete .alert > ul > li {
+            line-height: 20px;
+        }
+        #order-complete .alert > ul > li > span {
+            position: relative;
+            left: -6px;
         }
 
     </style>
