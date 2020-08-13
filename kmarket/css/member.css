@@ -381,3 +381,95 @@ height: auto;
     border-radius: 2px;
     cursor: pointer;
 }
+
+/* member-register-seller */
+#member-register-seller {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#member-register-seller > .register-seller {
+    width: 900px;
+    height: auto;
+}
+#member-register-seller > .register-seller > h1 {
+    padding-left: 10px;
+    margin-bottom: 24px;
+    font-size: 25px;
+    border-bottom: 2px solid #000;
+    margin-top: 10px;
+}
+#member-register-seller > .register-seller table {
+    position: relative;
+    width: 100%;
+    table-layout: fixed;
+    border-top: 1px solid #b6bdc7;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+#member-register-seller > section > form > section div {
+    text-align: left;
+    font-size: 16px;
+    padding-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+#member-register-seller > .register-seller table th {
+    width: 200px;
+    padding: 20px 20px;
+    vertical-align: top;
+    background: #f4f6f9;
+    font-weight: bold;
+    text-align: left;
+    line-height: 14px;
+    border-bottom: 1px solid #dfe5ed;
+    font-size: 14px;
+}
+#member-register-seller > .register-seller table td {
+    position: relative;
+    vertical-align: middle;
+    padding: 10px 20px;
+    text-align: left;
+    line-height: 14px;
+    border-bottom: 1px solid #dfe5ed;
+    font-size: 14px;
+    font-weight: bold;
+}
+#member-register-seller > .register-seller table .must {
+    color: #ef3f43;
+    margin-right: 5px;
+}
+#member-register-seller > .register-seller table input {
+    padding: 0 8px;
+    height: 30px;
+    font-size: 14px;
+    border: 1px solid #dfe5ed;
+    vertical-align: middle;
+}
+#member-register-seller > .register-seller table label {
+    display: inline-block;
+    width: 60px;
+    font-size: 17px;
+}
+#member-register-seller > .register-seller table .addr th {
+    padding-left: 30px;
+    padding-top: 50px;
+}
+#member-register-seller > .register-seller table .addr input {
+    margin-top: -30px;
+    margin-left: -10px;
+}
+#member-register-seller > .register-seller input[type=submit] {
+    display: block;
+    background: #ef3f43;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 72px;
+    margin: 40px auto;
+    border: 0;
+    outline: none;
+    border-radius: 2px;
+    cursor: pointer;
+}

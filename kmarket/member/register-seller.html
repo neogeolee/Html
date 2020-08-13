@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>케이마켓::회원가입</title>
+    <title>케이마켓::판매자회원가입</title>
     <link rel="stylesheet" href="../css/member.css">
     <style>
     
@@ -15,8 +15,8 @@
             <img src="../img/header_logo.png" alt="">
         </header>
         <main>
-            <div id="member-register">
-                <section class="register">
+            <div id="member-register-seller">
+                <section class="register-seller">
                     <h1>회원가입</h1>
                     <form action="#">
                         <section>
@@ -55,29 +55,59 @@
                         </section>
                         <section>
                             <table>
-                                <div>기본 정보입력</div>
+                                <div>판매자 정보입력</div>
                                     <tbody>
                                         <tr>
                                             <th>
-                                                <span class="must">*</span>이름
+                                                <span class="must">*</span>회사명
                                             </th>
                                             <td>
                                                 <input type="text" name="name" placeholder="이름을 입력" required>
                                             </td>
-                                        </tr>
+                                        <tr>
                                         <tr>
                                             <th>
-                                                <span class="must">*</span>성별
+                                                <span class="must">*</span>대표자명
                                             </th>
                                             <td>
-                                                <label>
-                                                    <input type="radio" name="gender" value="1" checked>&nbsp;남
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="gender" value="2" >&nbsp;여
-                                                </label>
+                                                <input type="text" name="name" placeholder="대표자 입력" required>
                                             </td>
-                                        </tr>    
+                                        <tr>
+                                        <tr>
+                                            <th>
+                                                <span class="must">*</span>사업자등록번호
+                                            </th>
+                                            <td>
+                                                <input type="text" name="name" placeholder="사업자등록번호 입력" required>
+                                                <span>- 표시 포함 12자리 입력, 예) 123-45-67890</span>
+                                            </td>
+                                        <tr>
+                                        <tr>
+                                            <th>
+                                                <span class="must">*</span>통신판매업신고 번호
+                                            </th>
+                                            <td>
+                                                <input type="text" name="name" placeholder="통신판매업신고번호 입력" required>
+                                                <span>- 표시 포함, 예) 강남-12345, 제 1-01-23-4567호, 2017-경기성남-0011</span>
+                                            </td>
+                                        <tr>
+                                        <tr>
+                                            <th>
+                                                <span class="must">*</span>전화번호
+                                            </th>
+                                            <td>
+                                                <input type="text" name="name" placeholder="전화번호 입력" required>
+                                                <span>- 표시 포함, 지역번호 포함, 예) 02-234-1234</span>
+                                            </td>
+                                        <tr>
+                                        <tr>
+                                            <th>
+                                                <span class="must">*</span>팩스번호
+                                            </th>
+                                            <td>
+                                                <input type="text" name="name" placeholder="팩스번호 입력" required>
+                                                <span>- 표시 포함, 지역번호 포함, 예) 02-234-1234</span>
+                                            </td>
                                         <tr>
                                             <th>
                                                 <span class="must">*</span>EMAIL
@@ -86,18 +116,9 @@
                                                 <input type="text" name="email" placeholder="이메일 입력" required>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <th>
-                                                <span class="must">*</span>휴대폰
-                                            </th>
-                                            <td>
-                                                <input type="text" name="hp" placeholder="휴대폰번호입력" required>
-                                                <span>-포함 13자리 입력해주세요</span>
-                                            </td>
-                                        </tr>    
                                         <tr class="addr">
                                             <th>
-                                                주소
+                                                회사주소
                                             </th>
                                             <td>
                                                 <div>
@@ -112,6 +133,28 @@
                                             </td>
                                         </tr>
                                     </tbody>
+                            </table>
+                        </section>
+                        <section>
+                            <div>담당자 정보 입력</div>
+                            <table>
+                                <tr>
+                                    <th>
+                                        <span class="must">*</span>이름
+                                    </th>
+                                    <td>
+                                        <input type="text" name="name" placeholder="이름을 입력" >
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <th>
+                                        <span class="must">*</span>휴대폰
+                                    </th>
+                                    <td>
+                                        <input type="text" name="hp" placeholder="휴대폰번호입력" required>
+                                        <span>-포함 13자리 입력해주세요</span>
+                                    </td>
+                                </tr> 
                             </table>
                         </section>
                         <div>
