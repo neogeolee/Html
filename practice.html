@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>연습</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        .hideme {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            opacity: 0;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                $('.hideme').each(function(i){
+                    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                    var botoom_of_window = $(window).scrollTop() + $(window).height();
+
+                    if(botoom_of_window > bottom_of_object/2){
+                        $(this).animate({'opacity': '1'}, 500);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div class="hideme">Fade In</div>
+        <div class="hideme">Fade In</div>
+        <div class="hideme">Fade In</div>
+        <div class="hideme">Fade In</div>
+        <div class="hideme">Fade In</div>
+    </div>
+</body>
+</html>
