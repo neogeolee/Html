@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>피자 드 시우</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script>
+        $(document).ready(function(){
+            $('.bxslider').bxSlider( {
+                mode: 'horizontal',// 가로 방향 수평 슬라이드
+                speed: 500,        // 이동 속도를 설정
+                pager: false,      // 현재 위치 페이징 표시 여부 설정
+                moveSlides: 1,     // 슬라이드 이동시 개수
+                auto: true,        // 자동 실행 여부
+                slideWidth: 800,
+                captions: true
+            });
+        });
+    </script>
+    <style>
+    #brand {
+        display: grid;
+    }
+    #brand .main {
+        display: grid;
+    } 
+    #brand .main_head {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-rows: minmax(200px, auto);
+        align-content: center;
+    } 
+    #brand .main_body {
+        display: grid;
+        grid-template-areas: "left right";
+    }
+    #brand .main_right{
+        grid-area: right;
+    }
+    #brand .main_right h2 {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    #brand .main_right h5 {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    #brand .main_right p {
+        margin-top: 10px;
+        line-height: 20px;
+        text-align: center;
+    }
+    #brand .slider{
+        grid-area: left;
+    }
+    .bx-wrapper img {
+        height: 500px;
+        max-width: auto;
+        display: inline;
+    }
+    </style>
+    
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="top">
+                <div class="logo">
+                    <div>
+                        <a href="#"><img src="../img/main.png" alt="메인"></a>
+                    </div>
+                </div>
+                <div class="menu">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle"><span>피자 드 시우</span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">브랜드이야기</a>
+                                </li>
+                                <li>
+                                    <a href="#">인테리어컨샙</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle"><span>대표메뉴</span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">오리지널피자</a>
+                                </li>
+                                <li>
+                                    <a href="#">스페셜피자</a>
+                                </li>
+                                <li>
+                                    <a href="#">사이드메뉴</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle"><span>가맹안내</span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">가맹안내</a>
+                                </li>
+                                <li>
+                                    <a href="#">가맹절차</a>
+                                </li>
+                                <li>
+                                    <a href="#">가맹FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="#">가맹문의</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle"><span>매장안내</span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">신규매장</a>
+                                </li>
+                                <li>
+                                    <a href="#">오시는길</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle"><span>COMMUNITY</span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">공지사항</a>
+                                </li>
+                                <li>
+                                    <a href="#">이벤트</a>
+                                </li>
+                                <li>
+                                    <a href="#">보도자료</a>
+                                </li>
+                                <li>
+                                    <a href="#">SNS</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main id="brand">
+            <section class="main">
+                <div class="main_head">
+                    <div><h1>피자 드 시우</h1></div>
+                    <div><p>HOME / 피자 드 시우 / <strong>브랜드이야기</strong></p></div>
+                </div>
+                <div class="main_body">
+                    <div class="main_right">
+                        <h2>
+                            <span>브랜드 이야기</span>
+                        </h2>
+                        <p>설렘으로 시작된 첫만남부터 기억 속을 걷는 이 순간까지 그대만을 생각합니다.</p>
+                        <p>
+                            아름답고도 낯설게 느껴지는 신비롭고도 익숙하게 다가오는<br>
+                            그때 그 대만을 추억 속에 담아 그대에게 전합니다.
+                        </p>
+                        <h5>오직, 하나뿐인 그대만을 위해 오직,그대만</h5>
+                        <p>
+                            오직 그대만을 위한, 오직 그 대만의 수제디저트를, 대만을 사랑하고,
+                            대만의 맛과 멋을 아는 여행자가 대만 그리고 여행의 경험을
+                            당신에게 공유하고 싶어서 열게 된 가게입니다.
+                        </p>
+                        <p>
+                            바른차이즈, 옳은차이즈를 슬로건으로 본사와 가맹점의 동반상생을 위해
+                            끊임없이 원가를 낮추고 신메뉴를 찾고 공급하는 오직 그대만
+                            생각하는 오직그대만과 함께 하시겠습니까?
+                        </p>
+                    </div>
+                    <div class="slider">
+                        <ul class="bxslider">
+                            <li><img src="../img/KakaoTalk_20200824_103137616_01.jpg"></li>
+                            <li><img src="../img/KakaoTalk_20200824_103137616_02.jpg"></li>
+                            <li><img src="../img/KakaoTalk_20200824_103137616_03.jpg"></li>
+                            <li><img src="../img/KakaoTalk_20200824_103137616_04.jpg"></li>
+                        </ul>
+                    </div>
+                </div>    
+            </section>
+        </main>
+        <footer>
+            <div class="bottom">
+                <span class="footer-logo"><img src="../img/footer_logo.png" alt="푸터로고"></span>
+                <p class="footer-text">
+                    부산 동래구 여고북로 8 | TEL:010-1234-5678 | Email:abcd@abcd.com <br>
+                    사업자등록번호:123-45-78910 | 대표자:김시우 | Instagram:pizza 
+
+                </p>
+            </div>
+            <div class="bottom-img">
+                <a href="#"><img src="./img/facebook.png" alt="sns"></a>
+                <a href="#"><img src="./img/instagram.png" alt="sns"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

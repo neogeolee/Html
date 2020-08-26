@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>피자 드 시우</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        #interioir {
+            display: grid;
+        }
+        #interioir .main_head {
+            display: grid;
+            grid-template-areas: "title nav";
+        }
+        #interioir .main_head_title{
+            grid-area: title;
+        }
+        #interioir .main_head_nav{
+            grid-area: nav;
+        }
+        #interioir .main_body {
+            display: grid;
+            grid-template-areas: "left1 right1"
+                                 "left2 right2"
+                                 "left3 right3"
+                                 "left4 right4"
+        }
+        #interioir .main_right1 {
+            grid-area: right1;
+        }
+        #interioir .main_left1 {
+            grid-area: left1;
+        }
+        #interioir .main_right2 {
+            grid-area: right2;
+        }
+        #interioir .main_left2 {
+            grid-area: left2;
+        }
+        #interioir .main_right3 {
+            grid-area: right3;
+        }
+        #interioir .main_left3 {
+            grid-area: left3;
+        }
+        #interioir .main_right4 {
+            grid-area: right4;
+        }
+        #interioir .main_left4 {
+            grid-area: left4;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="top">
+                <div class="logo">
+                    <div>
+                        <a href="#"><img src="../img/main.png" alt="메인"></a>
+                    </div>
+                </div>
+                <div class="menu">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle"><span>피자 드 시우</span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">브랜드이야기</a>
+                                </li>
+                                <li>
+                                    <a href="#">인테리어컨샙</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle"><span>대표메뉴</span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">오리지널피자</a>
+                                </li>
+                                <li>
+                                    <a href="#">스페셜피자</a>
+                                </li>
+                                <li>
+                                    <a href="#">사이드메뉴</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle"><span>가맹안내</span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">가맹안내</a>
+                                </li>
+                                <li>
+                                    <a href="#">가맹절차</a>
+                                </li>
+                                <li>
+                                    <a href="#">가맹FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="#">가맹문의</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle"><span>매장안내</span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">신규매장</a>
+                                </li>
+                                <li>
+                                    <a href="#">오시는길</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle"><span>COMMUNITY</span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">공지사항</a>
+                                </li>
+                                <li>
+                                    <a href="#">이벤트</a>
+                                </li>
+                                <li>
+                                    <a href="#">보도자료</a>
+                                </li>
+                                <li>
+                                    <a href="#">SNS</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main id="interioir">
+            <section class="main">
+                <div class="main_head">
+                    <div class="main_head_title"><h1>피자 드 시우</h1></div>
+                    <div class="main_head_nav"><p>HOME / 피자 드 시우 / <strong>인테리어컨샙</strong></p></div>
+                </div>
+                <div class="main_body">
+                    <div class="main_right1">
+                        <article>
+                            <h2>
+                                <span>Exterior</span>
+                            </h2>
+                            <p>BI에서 추출한 모티브들과 네이비, 화이트의 대표 컬러들을 바탕으로</p>
+                            <p>겉은 모던하지만, 속은 따뜻함이 넘치는 공간을 연출하였습니다.</p>
+                            <p>메뉴에 대한 부분을 인포그래픽으로 표현하여</p>
+                            <p>대만 디저트 카페인 것을 자연스럽게 외부에 녹였습니다.</p>
+                        </article>
+                    </div>
+                    <div class="main_left1"></div>
+                    <div class="main_left2">
+                        <article>
+                            <h2>
+                                <span>Exterior</span>
+                            </h2>
+                            <p>표준화된 브랜드 메뉴얼을 준수하여</p>
+                            <p>간판, 외벽, 사인물 등 모든 요소들을 포토존화 하였고,</p>
+                            <p>일관된 조명으로 통일성이 있게 하였습니다.</p>
+                            <p>주요 타깃인 여성분들이 SNS에 찍어 올릴 수 있는</p>
+                            <p>감성적인 공간이 탄생하였고, 자연스러운 입소문이 날 수 있었습니다.</p>
+                        </article>
+                    </div>
+                    <div class="main_right2"></div>
+                    <div class="main_right3">
+                        <article>
+                            <h2>
+                                <span>Interior</span>
+                            </h2>
+                            <p>세련된 대만의 모습과 달달함이 묻어나는 공간으로 연출하였습니다.</p>
+                            <p>원목과 따뜻한 느낌의 조명을 사용하여 맛있는 음료와 디저트가</p>
+                            <p>더욱 달달하게 느껴질 수 있도록 하였고,</p>
+                            <p>타일과 가구는 유럽풍 스타일을 선택하여</p>
+                            <p>대만의 느낌을 세련되게 표현하기 위해 노력하였습니다.</p>
+                        </article>
+                    </div>
+                    <div class="main_left3"></div>
+                    <div class="main_left4">
+                        <article>
+                            <h2>
+                                <span>Interior</span>
+                            </h2>
+                            <p>표준화된 브랜드 메뉴얼을 준수하여 머무르시는 손님들을 위한</p>
+                            <p>오직, 그대만의 대표 포토존을 만들었습니다.</p>
+                            <p>여성분들이 좋아하실 테이블, 의자와 감성적인 타이포그래피의 조화는</p>
+                            <p>타일과 가구는 유럽풍 스타일을 선택하여</p>
+                            <p>오직, 그대만 내부 인테리어의 꽃이라고 할 수 있습니다.</p>
+                        </article>
+                    </div>
+                    <div class="main_right4"></div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="bottom">
+                <span class="footer-logo"><img src="../img/footer_logo.png" alt="푸터로고"></span>
+                <p class="footer-text">
+                    부산 동래구 여고북로 8 | TEL:010-1234-5678 | Email:abcd@abcd.com <br>
+                    사업자등록번호:123-45-78910 | 대표자:김시우 | Instagram:pizza 
+
+                </p>
+            </div>
+            <div class="bottom-img">
+                <a href="#"><img src="./img/facebook.png" alt="sns"></a>
+                <a href="#"><img src="./img/instagram.png" alt="sns"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
