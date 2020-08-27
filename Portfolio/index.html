@@ -19,7 +19,7 @@
                 pager: false,      // 현재 위치 페이징 표시 여부 설정
                 moveSlides: 1,     // 슬라이드 이동시 개수
                 auto: true,        // 자동 실행 여부
-                slideWidth: 2400,
+                slideWidth: 1000,
                 captions: true
             });
         });
@@ -115,40 +115,33 @@
             </div>
         </header>
         <main id="index">
-            <section>
-                <section class="slider">
-                    <ul class="bxslider">
-                        <li>
-                            <img src="./img/pizzabg (2).jpg">
-                        </li>
-                        <li>
-                            <img src="./img/wallpaper-hot-steaming-pizza.jpg">
-                        </li>    
-                        <li>
-                            <img src="./img/pizza-bg2.jpg">    
-                        </li>
-                        <li>
-                            <img src="./img/Fast_food_Pizza_437953.jpg">
-                        </li>
-                    </ul>
-                </section>
-                <section class="intro_page">
-                    <div class="greeting">
-                        <div>
-                            <p>
-                                피자 드 시우를 들어 보셨나요 <br><br>
-                                피자먹으라는 뜻이에요 <br>
-                                그냥 제가 지은 상호명이에요 <br><br>
-                                있어보이게 프랑스어로 하고 <br>
-                                제이름 넣어서 만들었어요 <br><br>
-                                그렇게 연 가게 <br>
-                                우리는 피자의 맛과 멋 그 자체를 전합니다. <br>
-                                피자 드 시우를 드셔 보셨나요 <br>
-                            </p>    
-                        </div>
+            <section class="main">
+                <div class="main_head">
+                    <div class="main_right">
+                        <article class="main_text">
+                            <h2>피자 드 시우를 들어 보셨나요</h2>
+                            <p>피자먹으라는 뜻이에요</p> 
+                            <p>그냥 제가 지은 상호명이에요</p> 
+                            <p>있어보이게 프랑스어로 하고</p> 
+                            <p>제이름 넣어서 만들었어요 </p>
+                            <p>그렇게 연 가게</p> 
+                            <p>우리는 피자의 맛과 멋 그 자체를 전합니다.</p> 
+                            <p>피자 드 시우를 드셔 보셨나요 </p>
+                        </article>
                     </div>
+                    <div class="main_left">
+                        <ul class="bxslider">
+                            <li><img src="./img/slider1.jfif"></li>
+                            <li><img src="./img/slider2.jpg"></li>
+                            <li><img src="./img/slider3.jfif"></li>
+                            <li><img src="./img/slider4.jpg"></li>
+                            <li><img src="./img/slider5.jpg"></li>
+                        </ul>`
+                    </div>
+                </div>    
+                <section class="intro_page">
                     <div class="intro">
-                        <div>
+                        <div class="box_text">
                           <h3>창업비용</h3>   
                             <p>
                                 본사의 노하우를 바탕으로<br>
@@ -157,7 +150,7 @@
                                 매장지향적인 운영을 모색합니다.
                             </p>    
                         </div>
-                        <div> 
+                        <div class="box_text"> 
                             <h3>메뉴조리</h3>
                             <p>
                                 본사의 안정된 물류시스템으로<br>
@@ -166,7 +159,7 @@
                                 맛있는 음료와 디저트를 판매할 수 있습니다.
                             </p>    
                         </div>
-                        <div> 
+                        <div class="box_text"> 
                             <h3>인테리어</h3>
                             <p>
                                 일관된 브랜드 아이덴티티를 바탕으로<br>
@@ -175,14 +168,14 @@
                                 이는 곧 매출로 연관되어집니다.
                             </p>    
                         </div>
-                        <div>
+                        <div class="box_text">
                             <h3>전문성</h3>
                             <p>
                                 R&D 센터를 별도로 운영하고 있어<br>
                                 연구와 동반된 메뉴개발이 이루어집니다.
                             </p>    
                         </div>
-                        <div>
+                        <div class="box_text">
                             <h3>관리시스템</h3>
                             <p>
                                 본사 전문가들이 예비창업주와 함께 합니다.<br>
@@ -190,7 +183,7 @@
                                 점주님의 매출을 관리해드립니다.
                             </p>    
                         </div>
-                        <div>
+                        <div class="box_text">
                             <h3>기본</h3>
                             <p>
                                 원재료, 레시피, 포장 등<br>
@@ -200,27 +193,35 @@
                         </div>
                     </div>
                     <div class="customer">
-                        
-                        <div>
-                            <h3>고객센터</h3>
-                            <p>
-                                PHONE: 010-1234-1234<br>
-                                EMAIL: abcd@abcd.com
-                            </p>    
+                        <div class="box_text">
+                            <span><i class="fa fa-phone-square" aria-hidden="true"></i></span>
+                            <div>
+                                <h3>고객센터</h3>
+                                <p>
+                                    PHONE: 010-1234-1234<br>
+                                    EMAIL: abcd@abcd.com
+                                </p>
+                            </div>
                         </div>
-                        <div>
-                            <h3>상담시간</h3>
-                            <p>
-                                MONDAY-FRIDAY : 10:00 ~ 20:00<br>
-                                SATURDAY, SUNDAY : CLOSED
-                            </p>    
+                        <div class="box_text">
+                            <span><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                            <div>
+                                <h3>상담시간</h3>
+                                <p>
+                                    MONDAY-FRIDAY : 10:00 ~ 20:00<br>
+                                    SATURDAY, SUNDAY : CLOSED
+                                </p>
+                            </div>
                         </div>
-                        <div>
-                            <h3>찾아오시는 길</h3>
-                            <p>
-                                부산광역시 동래구 여고북로 8<br>
-                                e 편한세상 동래아시아드 맞은편
-                            </p>    
+                        <div class="box_text">
+                            <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                            <div>
+                                <h3>찾아오시는 길</h3>
+                                <p>
+                                    부산광역시 동래구 여고북로 8<br>
+                                    e 편한세상 동래아시아드 맞은편
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -236,8 +237,8 @@
                 </p>
             </div>
             <div class="bottom-img">
-                <a href="#"><img src="./img/facebook.png" alt="sns"></a>
-                <a href="#"><img src="./img/instagram.png" alt="sns"></a>
+                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
             </div>
         </footer>
     </div>

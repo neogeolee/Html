@@ -19,54 +19,13 @@
                 pager: false,      // 현재 위치 페이징 표시 여부 설정
                 moveSlides: 1,     // 슬라이드 이동시 개수
                 auto: true,        // 자동 실행 여부
-                slideWidth: 800,
+                slideWidth: 1000,
                 captions: true
             });
         });
     </script>
     <style>
-    #brand {
-        display: grid;
-    }
-    #brand .main {
-        display: grid;
-    } 
-    #brand .main_head {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        grid-template-rows: minmax(200px, auto);
-        align-content: center;
-    } 
-    #brand .main_body {
-        display: grid;
-        grid-template-areas: "left right";
-    }
-    #brand .main_right{
-        grid-area: right;
-    }
-    #brand .main_right h2 {
-        margin-top: 50px;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    #brand .main_right h5 {
-        margin-top: 50px;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    #brand .main_right p {
-        margin-top: 10px;
-        line-height: 20px;
-        text-align: center;
-    }
-    #brand .slider{
-        grid-area: left;
-    }
-    .bx-wrapper img {
-        height: 500px;
-        max-width: auto;
-        display: inline;
-    }
+    
     </style>
     
 </head>
@@ -158,38 +117,41 @@
         <main id="brand">
             <section class="main">
                 <div class="main_head">
-                    <div><h1>피자 드 시우</h1></div>
-                    <div><p>HOME / 피자 드 시우 / <strong>브랜드이야기</strong></p></div>
+                    <div class="main_head_title"><h1>피자 드 시우</h1></div>
+                    <div class="main_head_nav"><p>HOME / 피자 드 시우 / <strong>브랜드이야기</strong></p></div>
                 </div>
                 <div class="main_body">
                     <div class="main_right">
-                        <h2>
-                            <span>브랜드 이야기</span>
-                        </h2>
-                        <p>설렘으로 시작된 첫만남부터 기억 속을 걷는 이 순간까지 그대만을 생각합니다.</p>
-                        <p>
-                            아름답고도 낯설게 느껴지는 신비롭고도 익숙하게 다가오는<br>
-                            그때 그 대만을 추억 속에 담아 그대에게 전합니다.
-                        </p>
-                        <h5>오직, 하나뿐인 그대만을 위해 오직,그대만</h5>
-                        <p>
-                            오직 그대만을 위한, 오직 그 대만의 수제디저트를, 대만을 사랑하고,
-                            대만의 맛과 멋을 아는 여행자가 대만 그리고 여행의 경험을
-                            당신에게 공유하고 싶어서 열게 된 가게입니다.
-                        </p>
-                        <p>
-                            바른차이즈, 옳은차이즈를 슬로건으로 본사와 가맹점의 동반상생을 위해
-                            끊임없이 원가를 낮추고 신메뉴를 찾고 공급하는 오직 그대만
-                            생각하는 오직그대만과 함께 하시겠습니까?
-                        </p>
+                        <article class="main_text">
+                            <h2>
+                                <span>브랜드 이야기</span>
+                            </h2>
+                            <p>설렘으로 시작된 첫만남부터 기억 속을 걷는 이 순간까지 그대만을 생각합니다.</p>
+                            <p>
+                                아름답고도 낯설게 느껴지는 신비롭고도 익숙하게 다가오는<br>
+                                그때 그 대만을 추억 속에 담아 그대에게 전합니다.
+                            </p>
+                            <h5>오직, 하나뿐인 그대만을 위해 오직,그대만</h5>
+                            <p>
+                                오직 그대만을 위한, 오직 그 대만의 수제디저트를, 대만을 사랑하고,
+                                대만의 맛과 멋을 아는 여행자가 대만 그리고 여행의 경험을
+                                당신에게 공유하고 싶어서 열게 된 가게입니다.
+                            </p>
+                            <p>
+                                바른차이즈, 옳은차이즈를 슬로건으로 본사와 가맹점의 동반상생을 위해
+                                끊임없이 원가를 낮추고 신메뉴를 찾고 공급하는 오직 그대만
+                                생각하는 오직그대만과 함께 하시겠습니까?
+                            </p>
+                        </article>
                     </div>
-                    <div class="slider">
+                    <div class="main_left">
                         <ul class="bxslider">
-                            <li><img src="../img/KakaoTalk_20200824_103137616_01.jpg"></li>
-                            <li><img src="../img/KakaoTalk_20200824_103137616_02.jpg"></li>
-                            <li><img src="../img/KakaoTalk_20200824_103137616_03.jpg"></li>
-                            <li><img src="../img/KakaoTalk_20200824_103137616_04.jpg"></li>
-                        </ul>
+                            <li><img src="../img/slider1.jfif"></li>
+                            <li><img src="../img/slider2.jpg"></li>
+                            <li><img src="../img/slider3.jfif"></li>
+                            <li><img src="../img/slider4.jpg"></li>
+                            <li><img src="../img/slider5.jpg"></li>
+                        </ul>`
                     </div>
                 </div>    
             </section>
@@ -204,8 +166,8 @@
                 </p>
             </div>
             <div class="bottom-img">
-                <a href="#"><img src="./img/facebook.png" alt="sns"></a>
-                <a href="#"><img src="./img/instagram.png" alt="sns"></a>
+                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
             </div>
         </footer>
     </div>

@@ -16,12 +16,13 @@ a {text-decoration: none; color: #111;}
  /*헤더영역*/
  header .top {
      display: grid;
+     background-color: #051C48;
      grid-template-columns: 1.5fr 1fr;
      grid-template-rows: minmax(200px, auto);
      align-content: center;
  }
  header .logo img {
-     margin-left: 40px;
+     margin-left: 70px;
      margin-top: 40px;
  }
  header .menu {
@@ -34,7 +35,14 @@ a {text-decoration: none; color: #111;}
      grid-template-rows: auto;
      justify-content: center;
  }
+ header .dropdown span {
+     font-size: 15px;
+ }
+ header .dropdown a {
+    color: #fff;
+ }
  header .dropdown a:hover {
+     font-size: 13px;
      font-weight: bold;
  }
  header .dropdown a:hover + .dropdown-menu {
@@ -55,21 +63,66 @@ a {text-decoration: none; color: #111;}
      display: grid;
      grid-template-columns: 100%;
  }
- #index > section {
+ #index > .main {
      display: grid;
      grid-template-columns: 100%;
      grid-template-rows: minmax(100px, auto);
  }
+ #index .main_head {
+    display: grid;
+    margin-top: 70px;
+    grid-template-areas: "left right";
+    grid-column-gap: 70px;
+    box-sizing: border-box;
+    grid-template-rows: minmax(200px, auto);
+}
+#index .main_right {
+    grid-area: right;
+    box-sizing: border-box;
+}
+
+#index .main_left {
+    grid-area: left;
+    margin-left: 70px;
+    box-sizing: border-box;
+}
+#index .slider {
+    width: 100%;
+    height: 425px;
+    overflow: hidden;
+}
+#index .slider > .bx-wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+}
+#index .bxslider {
+    min-height: 300px;
+    max-height: 600px;
+}
+#index .main_text {
+    min-width: 300px;
+    max-width: 500px;
+    margin: 45px auto;
+    box-sizing: border-box;
+}
+#index .main_text h2 {
+    font-size: 18px;
+    font-weight: 700    ;
+    line-height: 1.5;
+    padding: 0 0.8em;
+    margin-bottom: 30px;
+}
+#index .main_text p {
+    margin: 0 0 20px;
+    padding: 0 1.5em;
+    box-sizing: border-box;
+    color: #505050;
+}
  #index .intro_page {
      display: grid;
      grid-gap: 80px;
- }
- #index .intro_page .greeting {
-     display: grid;
-     grid-template-rows: minmax(400px, auto);
-     justify-content: right;
-     background: url('./img/intro.jpg') no-repeat;
-     background-size: 100%, auto;
  }
  #index .intro_page .greeting p {
      margin-right: 40px;
@@ -80,8 +133,7 @@ a {text-decoration: none; color: #111;}
      border: none;
      border-radius: 10px;
      box-sizing: border-box;
-     background: #ffffff;
-     background-color: rgba(248, 243, 153, 0.5);
+     
  }
  #index .intro_page .intro {
      display: grid;
@@ -94,16 +146,12 @@ a {text-decoration: none; color: #111;}
      border-radius: 10px;
      box-sizing: border-box;
      background: #ffffff;
-     background-color: rgba(248, 243, 153, 0.5);
- }
- #index .intro_page .intro div h3 {
-     text-align: center;
-     font-weight: bold;
-     padding: 6px;
+     background-color: #f2f2f2;
  }
  #index .intro_page .intro div p {
-     padding: 6px;
-     text-align: center;
+     padding: 8px;
+     margin-bottom: 6px;
+     line-height: 20px;
  }
  #index .intro_page .customer {
      display: grid;
@@ -115,41 +163,300 @@ a {text-decoration: none; color: #111;}
      border: none;
      border-radius: 10px;
      box-sizing: border-box;
+     text-align: center;
      background: #ffffff;
-     background-color: rgba(248, 243, 153, 0.5);
+     background-color: #f2f2f2;
  }
- #index .intro_page .customer div h3 {
+ #index .intro_page .customer div span i {
+     margin-top: 20px;
+     font-size: 25px;
+     color: #111;
+ }
+ #index .box_text h3 {
+     position: relative;
+     margin-top: 20px;
      text-align: center;
-     font-weight: bold;
+     font-size: 15px;
+     line-height: 1.5;
+     font-weight: 800;
      padding: 6px;
  }
- #index .intro_page .customer div p {
-     padding: 6px;
-     text-align: center;
-     line-height: 50px;
+ #index .box_text h3::after {
+     content: '';
+     display: block;
+     width: 50px;
+     height: 3px;
+     position: absolute;
+     left: 46%;
+     bottom: -2px;
+     background: #111;
  }
+ #index .box_text p {
+     padding: 6px;
+     margin-bottom: 10px;
+     text-align: center;
+     font-size: 13px;
+     line-height: 40px;
+     color: #505050;
+ }
+ /*브랜드이야기*/
+    #brand {
+        display: grid;
+    }
+    #brand .main_head {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: minmax(100px, auto);
+        grid-template-areas: "title nav";
+    }
+    #brand .main_head_title{
+        grid-area: title;
+    }
+    #brand .main_head_title h1{
+       text-align: center;
+       margin-top: 30px;
+       font-size: 20px;
+    }
+    #brand .main_head_nav{
+        grid-area: nav;
+    }
+    #brand .main_head_nav p {
+        text-align: right;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    #brand .main_head_nav p > strong {
+        font-weight: bold;
+    }
+    #brand .main_body {
+        display: grid;
+        grid-template-areas: "left right";
+        box-sizing: border-box;
+        grid-template-rows: minmax(200px, auto);
+    }
+    #brand .main_right {
+        grid-area: right;
+        box-sizing: border-box;
+    }
+    
+    #brand .main_left {
+        grid-area: left;
+        margin-left: 70px;
+        box-sizing: border-box;
+    }
+    #brand .bxslider {
+        min-height: 300px;
+        max-height: 600px;
+    }
+    #brand .main_text {
+        min-width: 300px;
+        max-width: 500px;
+        margin: 45px auto;
+        box-sizing: border-box;
+    }
+    #brand .main_text > h2 {
+        border-left: 4px solid #111;
+        box-sizing: border-box;
+        font-size: 24px;
+        line-height: 1.5;
+        margin-top: 0;
+        margin-bottom: 6px;
+        position: relative;
+        padding: 0;
+    }
+    #brand .main_text > h2::after {
+        content: ' ';
+        background: #303030;
+        display: block;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        box-sizing: border-box;
+        z-index: 0;
+    }
+    #brand .main_text > h2 > span {
+        display: inline-block;
+        padding: 0 0.8em;
+        box-sizing: border-box;
+        position: relative;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.5;
+        margin-top: 0;
+        z-index: 1;
+        background: #fff;
+    }
+    #brand .main_text p {
+        margin: 0 0 20px;
+        box-sizing: border-box;
+        color: #505050;
+    }
+    
+ /*인테리어컨샙*/
+    #interioir {
+    display: grid;
+    }
+    #interioir .main_head {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: minmax(100px, auto);
+        grid-template-areas: "title nav";
+    }
+    #interioir .main_head_title{
+        grid-area: title;
+    }
+    #interioir .main_head_title h1{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+    }
+    #interioir .main_head_nav{
+        grid-area: nav;
+    }
+    #interioir .main_head_nav p {
+        text-align: right;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    #interioir .main_head_nav p > strong {
+        font-weight: bold;
+    }
+    #interioir .main_body {
+        display: grid;
+        grid-template-areas: "left1 right1"
+                            "left2 right2"
+                            "left3 right3"
+                            "left4 right4";
+        box-sizing: border-box;
+        grid-template-columns: 1fr, 1fr;
+        grid-template-rows: repeat(4, minmax(200px, auto));
+    }
+    #interioir .main_right1 {
+        grid-area: right1;
+        box-sizing: border-box;
+    }
+
+    #interioir .main_left1 {
+        grid-area: left1;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    #interioir .main_right2 {
+        grid-area: right2;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    #interioir .main_left2 {
+        grid-area: left2;
+        box-sizing: border-box;
+    }
+
+    #interioir .main_right3 {
+        grid-area: right3;
+        box-sizing: border-box;
+    }
+
+    #interioir .main_left3 {
+        grid-area: left3;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    #interioir .main_right4 {
+        grid-area: right4;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    #interioir .main_left4 {
+        grid-area: left4;
+        box-sizing: border-box;
+    }
+    #interioir .main_left1 img, .main_right2 img, .main_left3 img, .main_right4 img {
+        margin: 30px 100px 30px 0;
+    }
+    #interioir .main_left2, .main_right2, .main_left4, .main_right4 {
+        background-color: #f2f2f2;
+        box-sizing: border-box;
+    }
+    #interioir .main_text .bg_color {
+        background-color: #f2f2f2;
+        box-sizing: border-box;
+    }
+    #interioir .main_text {
+        min-width: 300px;
+        max-width: 500px;
+        margin: 45px auto;
+        box-sizing: border-box;
+    }
+    #interioir .main_text > h2 {
+        border-left: 4px solid #111;
+        box-sizing: border-box;
+        font-size: 24px;
+        line-height: 1.5;
+        margin-top: 0;
+        margin-bottom: 6px;
+        position: relative;
+        padding: 0;
+    }
+    #interioir .main_text > h2::after {
+        content: ' ';
+        background: #303030;
+        display: block;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        box-sizing: border-box;
+        z-index: 0;
+    }
+    #interioir .main_text > h2 > span {
+        display: inline-block;
+        padding: 0 0.8em;
+        box-sizing: border-box;
+        position: relative;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.5;
+        margin-top: 0;
+        z-index: 1;
+        background: #fff;
+    }
+    #interioir .main_text p {
+        margin: 0 0 20px;
+        box-sizing: border-box;
+        color: #505050;
+    }
  /*푸터영역*/
  footer {
      display: grid;
+     margin-top: 30px;
      grid-template-columns: 4fr 1fr;
      grid-template-rows: minmax(200px, auto);
      align-content: center;
      grid-gap: 50px;
+     background-color: #051C48;
  }
  footer .bottom {
      display: grid;
-     grid-template-columns: 1fr 1fr;
+     grid-template-columns: 0.5fr 1fr;
      grid-template-rows: minmax(200px, auto);
      align-content: center;
  }
  footer .footer-logo img {
-     margin-left: 40px;
-     margin-top: 40px;
+     margin: 40px 0 20px 40px;
  }
  footer .footer-text {
+     color: #fff;
+     font-size: 14px;
+     font-family: '';
      margin-top: 80px;
      line-height: 20px;
  }
- footer .bottom-img {
-     margin-top: 60px;
+ footer .bottom-img i {
+     margin: 70px 10px;
+     color: #e1e1e1;
+     font-weight: 700;
+     font-size: 20px;
  }
