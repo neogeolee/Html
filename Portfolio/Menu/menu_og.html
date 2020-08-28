@@ -13,131 +13,8 @@
     <link rel="stylesheet" href="../css/style.css">
     </script>
     <style>
-    #menu_og {
-        display: grid;
-    }
-    #menu_og .main_head {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: minmax(100px, auto);
-        grid-template-areas: "title nav";
-    }
-    #menu_og .main_head_title{
-        grid-area: title;
-    }
-    #menu_og .main_head_title h1{
-       text-align: center;
-       margin-top: 30px;
-       font-size: 20px;
-    }
-    #menu_og .main_head_nav{
-        grid-area: nav;
-    }
-    #menu_og .main_head_nav p {
-        text-align: right;
-        margin-right: 20px;
-        margin-top: 20px;
-    }
-    #menu_og .main_head_nav p > strong {
-        font-weight: bold;
-    }
-    #menu_og .main_body_title > h2 {
-        border-left: 4px solid #111;
-        box-sizing: border-box;
-        font-size: 24px;
-        line-height: 1.5;
-        margin: 10px 0px 20px 70px;
-        position: relative;
-        padding: 0;
-    }
-    #menu_og .main_body_title > h2::after {
-        content: ' ';
-        background: #303030;
-        display: block;
-        height: 2px;
-        width: 300px;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
-        box-sizing: border-box;
-        z-index: 0;
-    }
-    #menu_og .main_body_title > h2 > span {
-        display: inline-block;
-        padding: 0 0.8em;
-        box-sizing: border-box;
-        position: relative;
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 1.5;
-        margin-top: 0;
-        z-index: 1;
-        background: #fff;
-    }
-    #menu_og .main_content{
-        height: 100%;
-        width: 100%;
-    }
-    #menu_og .main_image{
-        margin: 0 auto;
-        position: relative;
-        background-image: url('../img/pizza_og.jpg');                                                               
-        width: 1080px;
-        height: 540px;
-        background-size: cover;
-    }
-
-    #menu_og .image_cover{
-       position: absolute;
-       height: auto;
-       width: auto;
-       background-color: rgba(0, 0, 0, 0.7);                                                                 
-       z-index:1;
-    }
-
-    #menu_og  .main_image .text_image{
-         position: absolute;
-         top:50%;
-         left:50%;
-         transform: translate(-50%, -50%);                                                                   
-         font-size:5rem;
-         color: #fff;
-         z-index: 2;
-         text-align: center;
-    }
-    #menu_og  .main_image .text_image h2 {
-        font-size: 15px;
-        margin-bottom: 20px;
-    } 
-    #menu_og  .main_image .text_image p {
-        margin-top: 10px;
-        font-size: 13px;
-    } 
-    #menu_og .menu_image{
-        display: grid;
-        margin-top: 50px;
-        grid-gap: 50px;
-    }
-    #menu_og .og_image{
-        display: grid;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        grid-template-columns: repeat(3, 300px);
-        grid-template-rows: repeat(2, 300px);
-    }
-    #menu_og .og_image > article {
-        border: 1px solid red;
-    }
-    #menu_og .og_image > article div {
-        border: 1px solid blue;
-        background-image: url('../img/KakaoTalk_20200824_103137616_01.jpg');
-        background-size: cover;
-        border-radius: 70%;
-        min-width: 300px;
-        min-height: 300px;
-    }
+    
+    
     </style>
     
 </head>
@@ -263,24 +140,267 @@
                                 </h2>
                             </article>
                         </div>
-                        <div class="og_image">
+                        <div class="prd_og">
                             <article>
-                                <div></div>
+                                <ul>
+                                    <li>
+                                        <div class="prd_imgage">
+                                            <img src="../img/KakaoTalk_20200824_103137616_01.jpg">
+                                        </div>
+                                        <div class="prd_content">
+                                            <div class="subject">
+                                                오리지널피자
+                                                <div class="label_box">
+                                                    <span>HOT</span>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                        <div class="prd_price">
+                                            <div class="price_box">
+                                                <span class="price">
+                                                    <span class="size_l">L</span>
+                                                        34,900~&nbsp;
+                                                </span>
+                                                <span class="price">
+                                                    <span class="size_l">M</span>
+                                                        29,000~&nbsp;
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="hashtag">
+                                            <span># 남녀노소 모두가 즐기는 기본중의 기본</span>
+                                        </div>
+                                    </li>                               
+                                </ul>
                             </article>
                             <article>
-                                <div></div>
+                                <ul>
+                                    <li>
+                                        <div class="prd_imgage">
+                                            <img src="../img/KakaoTalk_20200824_103137616_01.jpg">
+                                        </div>
+                                        <div class="prd_content">
+                                            <div class="subject">
+                                                오리지널피자
+                                                <div class="label_box">
+                                                    <span>HOT</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="prd_price">
+                                            <div class="price_box">
+                                                <span class="price">
+                                                    <span class="size_l">L</span>
+                                                        34,900~&nbsp;
+                                                </span>
+                                                <span class="price">
+                                                    <span class="size_l">M</span>
+                                                        29,000~&nbsp;
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="hashtag">
+                                            <span># 남녀노소 모두가 즐기는 기본중의 기본</span>
+                                        </div>
+                                    </li>                               
+                                </ul>
                             </article>
                             <article>
-                                <div></div>
+                                <ul>
+                                    <li>
+                                        <div class="prd_imgage">
+                                            <img src="../img/KakaoTalk_20200824_103137616_01.jpg">
+                                        </div>
+                                        <div class="prd_content">
+                                            <div class="subject">
+                                                오리지널피자
+                                            
+                                                <div class="label_box">
+                                                    <span>HOT</span>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                        <div class="prd_price">
+                                            <div class="price_box">
+                                                <span class="price">
+                                                    <span class="size_l">L</span>
+                                                        34,900~&nbsp;
+                                                </span>
+                                                <span class="price">
+                                                    <span class="size_l">M</span>
+                                                        29,000~&nbsp;
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="hashtag">
+                                            <span># 남녀노소 모두가 즐기는 기본중의 기본</span>
+                                        </div>
+                                    </li>                               
+                                </ul>
                             </article>
                             <article>
-                                <div></div>
+                                <ul>
+                                    <li>
+                                        <div class="prd_imgage">
+                                            <img src="../img/KakaoTalk_20200824_103137616_01.jpg">
+                                        </div>
+                                        <div class="prd_content">
+                                            <div class="subject">
+                                                오리지널피자
+                                                <div class="label_box">
+                                                    <span>HOT</span>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                        <div class="prd_price">
+                                            <div class="price_box">
+                                                <span class="price">
+                                                    <span class="size_l">L</span>
+                                                        34,900~&nbsp;
+                                                </span>
+                                                <span class="price">
+                                                    <span class="size_l">M</span>
+                                                        29,000~&nbsp;
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="hashtag">
+                                            <span># 남녀노소 모두가 즐기는 기본중의 기본</span>
+                                        </div>
+                                    </li>                               
+                                </ul>
                             </article>
                             <article>
-                                <div></div>
+                                <ul>
+                                    <li>
+                                        <div class="prd_imgage">
+                                            <img src="../img/KakaoTalk_20200824_103137616_01.jpg">
+                                        </div>
+                                        <div class="prd_content">
+                                            <div class="subject">
+                                                오리지널피자
+                                            
+                                                <div class="label_box">
+                                                    <span>HOT</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="prd_price">
+                                            <div class="price_box">
+                                                <span class="price">
+                                                    <span class="size_l">L</span>
+                                                        34,900~&nbsp;
+                                                </span>
+                                                <span class="price">
+                                                    <span class="size_l">M</span>
+                                                        29,000~&nbsp;
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="hashtag">
+                                            <span># 남녀노소 모두가 즐기는 기본중의 기본</span>
+                                        </div>
+                                    </li>                               
+                                </ul>
                             </article>
                             <article>
-                                <div></div>
+                                <ul>
+                                    <li>
+                                        <div class="prd_imgage">
+                                            <img src="../img/KakaoTalk_20200824_103137616_01.jpg">
+                                        </div>
+                                        <div class="prd_content">
+                                            <div class="subject">
+                                                오리지널피자
+                                            
+                                                <div class="label_box">
+                                                    <span>HOT</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="prd_price">
+                                            <div class="price_box">
+                                                <span class="price">
+                                                    <span class="size_l">L</span>
+                                                        34,900~&nbsp;
+                                                </span>
+                                                <span class="price">
+                                                    <span class="size_l">M</span>
+                                                        29,000~&nbsp;
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="hashtag">
+                                            <span># 남녀노소 모두가 즐기는 기본중의 기본</span>
+                                        </div>
+                                    </li>                               
+                                </ul>
+                            </article>
+                            <article>
+                                <ul>
+                                    <li>
+                                        <div class="prd_imgage">
+                                            <img src="../img/KakaoTalk_20200824_103137616_01.jpg">
+                                        </div>
+                                        <div class="prd_content">
+                                            <div class="subject">
+                                                오리지널피자
+                                            
+                                                <div class="label_box">
+                                                    <span>HOT</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="prd_price">
+                                            <div class="price_box">
+                                                <span class="price">
+                                                    <span class="size_l">L</span>
+                                                        34,900~&nbsp;
+                                                </span>
+                                                <span class="price">
+                                                    <span class="size_l">M</span>
+                                                        29,000~&nbsp;
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="hashtag">
+                                            <span># 남녀노소 모두가 즐기는 기본중의 기본</span>
+                                        </div>
+                                    </li>                               
+                                </ul>
+                            </article>
+                            <article>
+                                <ul>
+                                    <li>
+                                        <div class="prd_imgage">
+                                            <img src="../img/KakaoTalk_20200824_103137616_01.jpg">
+                                        </div>
+                                        <div class="prd_content">
+                                            <div class="subject">
+                                                오리지널피자
+                                            
+                                                <div class="label_box">
+                                                    <span>HOT</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="prd_price">
+                                            <div class="price_box">
+                                                <span class="price">
+                                                    <span class="size_l">L</span>
+                                                        34,900~&nbsp;
+                                                </span>
+                                                <span class="price">
+                                                    <span class="size_l">M</span>
+                                                        29,000~&nbsp;
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="hashtag">
+                                            <span># 남녀노소 모두가 즐기는 기본중의 기본</span>
+                                        </div>
+                                    </li>                               
+                                </ul>
                             </article>
                         </div>
                     </div>

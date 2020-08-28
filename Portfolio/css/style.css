@@ -16,10 +16,14 @@ a {text-decoration: none; color: #111;}
  /*헤더영역*/
  header .top {
      display: grid;
-     background-color: #051C48;
+     background-image: url('../img/head_bg.png');
+     background-size: cover;
      grid-template-columns: 1.5fr 1fr;
      grid-template-rows: minmax(200px, auto);
      align-content: center;
+ }
+ header .logo {
+    background-color: rgba(0, 0, 0, 0.5);
  }
  header .logo img {
      margin-left: 70px;
@@ -28,6 +32,7 @@ a {text-decoration: none; color: #111;}
  header .menu {
      display: grid;
      align-content: center;
+     background-color: rgba(0, 0, 0, 0.5);
  }
  header .menu .nav {
      display: grid;
@@ -39,7 +44,7 @@ a {text-decoration: none; color: #111;}
      font-size: 15px;
  }
  header .dropdown a {
-    color: #fff;
+    color:#00bf00;
  }
  header .dropdown a:hover {
      font-size: 13px;
@@ -70,9 +75,7 @@ a {text-decoration: none; color: #111;}
  }
  #index .main_head {
     display: grid;
-    margin-top: 70px;
     grid-template-areas: "left right";
-    grid-column-gap: 70px;
     box-sizing: border-box;
     grid-template-rows: minmax(200px, auto);
 }
@@ -83,7 +86,6 @@ a {text-decoration: none; color: #111;}
 
 #index .main_left {
     grid-area: left;
-    margin-left: 70px;
     box-sizing: border-box;
 }
 #index .slider {
@@ -91,7 +93,10 @@ a {text-decoration: none; color: #111;}
     height: 425px;
     overflow: hidden;
 }
-#index .slider > .bx-wrapper {
+#index .bx-wrapper {
+    margin-top: 70px;
+    margin-left: 200px;
+    margin-bottom: 30px;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -104,17 +109,18 @@ a {text-decoration: none; color: #111;}
 #index .main_text {
     min-width: 300px;
     max-width: 500px;
-    margin: 45px auto;
+    margin: 70px auto;
     box-sizing: border-box;
 }
 #index .main_text h2 {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 700    ;
     line-height: 1.5;
     padding: 0 0.8em;
     margin-bottom: 30px;
 }
 #index .main_text p {
+    font-size: 14px;
     margin: 0 0 20px;
     padding: 0 1.5em;
     box-sizing: border-box;
@@ -208,25 +214,33 @@ a {text-decoration: none; color: #111;}
         grid-template-columns: 1fr 1fr;
         grid-template-rows: minmax(100px, auto);
         grid-template-areas: "title nav";
+        background-image: url('../img/pizza-bg2.jpg');
+        background-size: cover;
     }
     #brand .main_head_title{
         grid-area: title;
+        background: rgba(0, 0, 0, 0.5);
     }
     #brand .main_head_title h1{
-       text-align: center;
-       margin-top: 30px;
-       font-size: 20px;
+        text-align: center;
+        margin-top: 30px;
+        font-size: 24px;
+        font-weight: 800;
+        color: #fff;
     }
     #brand .main_head_nav{
         grid-area: nav;
+        background: rgba(0, 0, 0, 0.5);
     }
     #brand .main_head_nav p {
         text-align: right;
         margin-right: 20px;
         margin-top: 20px;
+        color: #fff;
     }
     #brand .main_head_nav p > strong {
         font-weight: bold;
+        color: #fff;
     }
     #brand .main_body {
         display: grid;
@@ -296,32 +310,41 @@ a {text-decoration: none; color: #111;}
     
  /*인테리어컨샙*/
     #interioir {
-    display: grid;
+        display: grid;
     }
     #interioir .main_head {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: minmax(100px, auto);
         grid-template-areas: "title nav";
+        border-bottom: 1px solid #111;
+        background-image: url('../img/pizza-bg2.jpg');
+        background-size: cover;
     }
     #interioir .main_head_title{
         grid-area: title;
+        background: rgba(0, 0, 0, 0.5);
     }
     #interioir .main_head_title h1{
-    text-align: center;
-    margin-top: 30px;
-    font-size: 20px;
+        text-align: center;
+        margin-top: 30px;
+        font-size: 24px;
+        font-weight: 800;
+        color: #fff;
     }
     #interioir .main_head_nav{
         grid-area: nav;
+        background: rgba(0, 0, 0, 0.5);
     }
     #interioir .main_head_nav p {
         text-align: right;
+        color: #fff;
         margin-right: 20px;
         margin-top: 20px;
     }
     #interioir .main_head_nav p > strong {
         font-weight: bold;
+        color: #fff;
     }
     #interioir .main_body {
         display: grid;
@@ -428,6 +451,196 @@ a {text-decoration: none; color: #111;}
         box-sizing: border-box;
         color: #505050;
     }
+    /*오리지널 메뉴영역*/
+    #menu_og {
+        display: grid;
+    }
+    #menu_og .main_head {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: minmax(100px, auto);
+        grid-template-areas: "title nav";
+        background-image: url('../img/pizza-bg2.jpg');
+        background-size: cover;
+    }
+    #menu_og .main_head_title{
+        grid-area: title;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    #menu_og .main_head_title h1{
+        text-align: center;
+        margin-top: 30px;
+        font-size: 24px;
+        font-weight: 800;
+        color: #fff;
+    }
+    #menu_og .main_head_nav{
+        grid-area: nav;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    #menu_og .main_head_nav p {
+        text-align: right;
+        margin-right: 20px;
+        margin-top: 20px;
+        color: #fff;
+    }
+    #menu_og .main_head_nav p > strong {
+        font-weight: bold;
+        color: #fff;
+    }
+    #menu_og .main_body_title > h2 {
+        border-left: 4px solid #111;
+        box-sizing: border-box;
+        font-size: 24px;
+        line-height: 1.5;
+        margin: 10px 0px 20px 70px;
+        position: relative;
+        padding: 0;
+    }
+    #menu_og .main_body_title > h2::after {
+        content: ' ';
+        background: #303030;
+        display: block;
+        height: 2px;
+        width: 300px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        box-sizing: border-box;
+        z-index: 0;
+    }
+    #menu_og .main_body_title > h2 > span {
+        display: inline-block;
+        padding: 0 0.8em;
+        box-sizing: border-box;
+        position: relative;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.5;
+        margin-top: 0;
+        z-index: 1;
+        background: #fff;
+    }
+    #menu_og .main_content{
+        height: 100%;
+        width: 100%;
+    }
+    #menu_og .main_image{
+        margin: 0 auto;
+        position: relative;
+        background-image: url('../img/pizza_og.jpg');                                                               
+        width: 1080px;
+        height: 540px;
+        background-size: cover;
+    }
+
+    #menu_og .image_cover{
+       position: absolute;
+       height: 100%;
+       width: 100%;
+       background-color: rgba(0, 0, 0, 0.7);                                                                 
+       z-index:1;
+    }
+
+    #menu_og  .main_image .text_image{
+         position: absolute;
+         top:50%;
+         left:50%;
+         transform: translate(-50%, -50%);                                                                   
+         font-size:5rem;
+         color: #fff;
+         z-index: 2;
+         text-align: center;
+    }
+    #menu_og  .main_image .text_image h2 {
+        font-size: 15px;
+        margin-bottom: 20px;
+    } 
+    #menu_og  .main_image .text_image p {
+        margin-top: 10px;
+        font-size: 13px;
+    } 
+    #menu_og .menu_image{
+        display: grid;
+        margin-top: 50px;
+        grid-gap: 50px;
+    }
+    #menu_og .prd_og{
+        display: grid;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-row-gap: 20px;
+    }
+    #menu_og .prd_og > article {
+        box-sizing: border-box;
+    }
+    #menu_og .prd_og > article ul {
+        box-sizing: border-box;
+        margin-left: 70px;
+        width: 100%;
+        height: 100%;
+        vertical-align: top;
+    }
+    #menu_og .prd_og > article ul li {
+        display: inline-block;
+        font-size: 14px;
+        vertical-align: top;
+    }
+    #menu_og .prd_og > article .prd_content {
+        margin-top: 20px;
+        line-height: 24px;
+    }
+    #menu_og .prd_og > article .prd_content .subject {
+        font-size: 20px;
+        color: #111;
+        font-weight: 600;
+        vertical-align: middle;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 22px;
+        height: auto;
+        max-height: 44px;
+    }
+    #menu_og .prd_og > article .prd_content .label_box {
+        display: inline-block;
+        margin-left: 4px;
+        margin-top: 2px;
+        vertical-align: middle;
+    }
+    #menu_og .prd_og > article .prd_content .label_box {
+        border-color: #FF143C;
+        background-color: #FF143C;
+        border-radius: 2px;
+        color: #ffffff;
+        font-size: 9px;
+        font-weight: 700;
+        height: 16px;
+        line-height: 16px;
+        padding: 0 5px;
+    }
+    #menu_og .prd_og > article .price_box {
+        margin: 12px 0 18px;
+    }
+    #menu_og .prd_og > article .price_box span {
+        display: inline-block;
+        font-size: 16px;
+        color: #000;
+        font-weight: 700;
+    }
+    #menu_og .prd_og > article .price_box span [class^='size'] {
+        margin-right: 8px;
+        color: #FF143C;
+    }
+    #menu_og .prd_og > article .hashtag span{
+        display: block;
+        font-size: 14px;
+        color: #888888;
+    }
+    
  /*푸터영역*/
  footer {
      display: grid;
@@ -435,28 +648,32 @@ a {text-decoration: none; color: #111;}
      grid-template-columns: 4fr 1fr;
      grid-template-rows: minmax(200px, auto);
      align-content: center;
-     grid-gap: 50px;
-     background-color: #051C48;
+     background-image: url('../img/head_bg.png');
+     background-size: cover;
  }
  footer .bottom {
      display: grid;
      grid-template-columns: 0.5fr 1fr;
      grid-template-rows: minmax(200px, auto);
      align-content: center;
+     background-color: rgba(0, 0, 0, 0.5);
  }
  footer .footer-logo img {
      margin: 40px 0 20px 40px;
  }
  footer .footer-text {
-     color: #fff;
+     color: #00bf00;
      font-size: 14px;
      font-family: '';
      margin-top: 80px;
      line-height: 20px;
  }
+ footer .bottom-img {
+    background-color: rgba(0, 0, 0, 0.5);
+ }
  footer .bottom-img i {
      margin: 70px 10px;
-     color: #e1e1e1;
+     color: #00bf00;
      font-weight: 700;
      font-size: 20px;
  }
