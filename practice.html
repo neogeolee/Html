@@ -2,40 +2,258 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>연습</title>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rewebbasic</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <style>
-        .hideme {
-            width: 200px;
-            height: 200px;
-            border: 1px solid red;
-            opacity: 0;
-        }
-    </style>
-    <script>
-        $(document).ready(function(){
-            $(window).scroll(function(){
-                $('.hideme').each(function(i){
-                    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-                    var botoom_of_window = $(window).scrollTop() + $(window).height();
-
-                    if(botoom_of_window > bottom_of_object/2){
-                        $(this).animate({'opacity': '1'}, 500);
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./pstyle.css">
+    
 </head>
 <body>
-    <div id="container">
-        <div class="hideme">Fade In</div>
-        <div class="hideme">Fade In</div>
-        <div class="hideme">Fade In</div>
-        <div class="hideme">Fade In</div>
-        <div class="hideme">Fade In</div>
-    </div>
+    <!-- Header -->
+    <header id="header">
+        <div>
+            <a href="#" class="logo">로고</a>
+        </div>
+        <ul>
+            <li>
+                <a href="#one" onclick="toggle()">피자 드 시우</a>
+            </li>
+            <li>
+                <a href="#two" onclick="toggle()">대표메뉴</a>
+            </li>
+            <li>
+                <a href="#three" onclick="toggle()">가맹안내</a>
+            </li>
+            <li>
+                <a href="#four" onclick="toggle()">고객센터</a>
+            </li>
+            <li>
+                <a href="#five" onclick="toggle()">커뮤니티</a>
+            </li>
+        </ul>
+        <div class="toggle" onclick="toggle()"></div>
+    </header>
+<main id="index">
+    <section class="banner">
+        <h2>안뇽</h2>
+    </section>
+    <!-- one -->
+    <section class="sec one" id="one">
+        <article class="main_text">
+            <h2>피자 드 시우를 들어 보셨나요</h2>
+            <p>피자먹으라는 뜻이에요</p> 
+            <p>그냥 제가 지은 상호명이에요</p> 
+            <p>있어보이게 프랑스어로 하고</p> 
+            <p>제이름 넣어서 만들었어요 </p>
+            <p>그렇게 연 가게</p> 
+            <p>우리는 피자의 맛과 멋 그 자체를 전합니다.</p> 
+            <p>피자 드 시우를 드셔 보셨나요 </p>
+            <p><a href="#">View Detail</a></p>
+        </article>
+    </section>
+
+    <!-- two -->
+    <section class="sec two" id="two">
+        <div class="menu">
+            <a href="#">
+                <div class="img">
+                    <img src="" alt="">
+                </div>    
+                <div class="detail">
+                    <div>
+                        <h2>오리지널피자</h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="menu">
+            <a href="#">
+                <div class="img">
+                    <img src="" alt="">
+                </div>    
+                <div class="detail">
+                    <div>
+                        <h2>스페셜피자</h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="menu">
+            <a href="#">
+                <div class="img">
+                    <img src="" alt="">
+                </div>    
+                <div class="detail">
+                    <div>
+                        <h2>사이드메뉴</h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- three -->
+    <section class="sec three" id="three">
+        <div class="intro">
+            <div class="box_text">
+              <h3>창업비용</h3>   
+                <p>
+                    본사의 노하우를 바탕으로<br>
+                    합리적인 창업비용을 제안합니다.<br>
+                    바른차이즈, 옳은차이즈를 목표로<br>
+                    매장지향적인 운영을 모색합니다.
+                </p>    
+            </div>
+            <div class="box_text"> 
+                <h3>메뉴조리</h3>
+                <p>
+                    본사의 안정된 물류시스템으로<br>
+                    반조리된 상태로 모든 재료를 공급합니다.<br>
+                    매장은 최소의 인건비와 노력으로<br>
+                    맛있는 음료와 디저트를 판매할 수 있습니다.
+                </p>    
+            </div>
+            <div class="box_text"> 
+                <h3>인테리어</h3>
+                <p>
+                    일관된 브랜드 아이덴티티를 바탕으로<br>
+                    동일한 인테리어 컨셉을 구축할 수 있습니다.<br>
+                    어디서든 눈에 띄는 매장이라<br>
+                    이는 곧 매출로 연관되어집니다.
+                </p>    
+            </div>
+            <div class="box_text">
+                <h3>전문성</h3>
+                <p>
+                    R&D 센터를 별도로 운영하고 있어<br>
+                    연구와 동반된 메뉴개발이 이루어집니다.
+                </p>    
+            </div>
+            <div class="box_text">
+                <h3>관리시스템</h3>
+                <p>
+                    본사 전문가들이 예비창업주와 함께 합니다.<br>
+                    체계적인 교육시스템과 관리로<br>
+                    점주님의 매출을 관리해드립니다.
+                </p>    
+            </div>
+            <div class="box_text">
+                <h3>기본</h3>
+                <p>
+                    원재료, 레시피, 포장 등<br>
+                    기본에 충실함을 원칙으로 합니다.<br>
+                    상품력, 컨셉이 성공의 지름길입니다.
+                </p>    
+            </div>
+        </div>
+    </section>
+
+    <!-- four -->
+    <section class="sec four" id="four">
+        <div class="customer">
+            <div class="box_text">
+                <span><i class="fa fa-phone-square" aria-hidden="true"></i></span>
+                <div>
+                    <h3>고객센터</h3>
+                    <p>
+                        PHONE: 010-1234-1234<br>
+                        EMAIL: abcd@abcd.com
+                    </p>
+                </div>
+            </div>
+            <div class="box_text">
+                <span><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                <div>
+                    <h3>상담시간</h3>
+                    <p>
+                        MONDAY-FRIDAY : 10:00 ~ 20:00<br>
+                        SATURDAY, SUNDAY : CLOSED
+                    </p>
+                </div>
+            </div>
+            <div class="box_text">
+                <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                <div>
+                    <h3>찾아오시는 길</h3>
+                    <p>
+                        부산광역시 동래구 여고북로 8<br>
+                        e 편한세상 동래아시아드 맞은편
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- five -->
+    <section class="sec five" id="five">
+        <h5>다섯</h5>
+    </section>
+</main>
+<!-- footer-->
+<footer id="footer">
+    <a href="#" class="logo">로고</a>
+    <div class="toggle" onclick="toggle()"></div>
+</footer>
+    
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>    
+<script type="text/javascript">
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })
+    function toggle(){
+        var header = document.querySelector("header");
+        header.classList.toggle("active");
+    }
+
+    window.onload = function () {
+            var elm = ".sec";
+            $(elm).each(function (index) {
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                    } 
+                    else if (event.detail)
+                        delta = -event.detail / 3;
+                    var moveTop = $(window).scrollTop();
+                    var elmSelecter = $(elm).eq(index);
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(elmSelecter).next() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).next().offset().top;
+                            }catch(e){}
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(elmSelecter).prev() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).prev().offset().top;
+                            }catch(e){}
+                        }
+                    }
+                     
+                    // 화면 이동 0.8초(800)
+                    $("html,body").stop().animate({
+                        scrollTop: moveTop + 'px'
+                    }, {
+                        duration: 300, complete: function () {
+                        }
+                    });
+                });
+            });
+        }
+</script>
+
 </body>
 </html>

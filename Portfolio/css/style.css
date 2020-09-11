@@ -130,17 +130,11 @@ a {text-decoration: none; color: #111;}
      display: grid;
      grid-gap: 80px;
  }
- #index .intro_page .greeting p {
-     margin-right: 40px;
-     margin-top: 100px;
-     padding: 6px;
-     font-size: 16px;
-     font-weight: bold;
-     border: none;
-     border-radius: 10px;
-     box-sizing: border-box;
-     
+ #index .box1 {
+     display: grid;
+     grid-gap: 80px;
  }
+ 
  #index .intro_page .intro {
      display: grid;
      grid-template-columns: repeat(3, 1fr);
