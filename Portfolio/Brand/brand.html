@@ -22,8 +22,19 @@
                 slideWidth: 1000,
                 captions: true
             });
+
         });
+
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+        function toggle(){
+            var header = document.querySelector("header");
+            header.classList.toggle("active");
+        }
     </script>
+            
     <style>
     
     </style>
@@ -31,95 +42,32 @@
 </head>
 <body>
     <div id="wrapper">
-        <header>
-            <div class="top">
-                <div class="logo">
-                    <div>
-                        <a href="#"><img src="../img/main.png" alt="메인"></a>
-                    </div>
-                </div>
-                <div class="menu">
-                    <ul class="nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle"><span>피자 드 시우</span></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">브랜드이야기</a>
-                                </li>
-                                <li>
-                                    <a href="#">인테리어컨샙</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle"><span>대표메뉴</span></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">오리지널피자</a>
-                                </li>
-                                <li>
-                                    <a href="#">스페셜피자</a>
-                                </li>
-                                <li>
-                                    <a href="#">사이드메뉴</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle"><span>가맹안내</span></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">가맹안내</a>
-                                </li>
-                                <li>
-                                    <a href="#">가맹절차</a>
-                                </li>
-                                <li>
-                                    <a href="#">가맹FAQ</a>
-                                </li>
-                                <li>
-                                    <a href="#">가맹문의</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle"><span>매장안내</span></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">신규매장</a>
-                                </li>
-                                <li>
-                                    <a href="#">오시는길</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle"><span>COMMUNITY</span></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">공지사항</a>
-                                </li>
-                                <li>
-                                    <a href="#">이벤트</a>
-                                </li>
-                                <li>
-                                    <a href="#">보도자료</a>
-                                </li>
-                                <li>
-                                    <a href="#">SNS</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+        <header id="header">
+            <div>
+                
+                <a href="#" class="logo"><img src="../img/main.png"></a>
             </div>
+            <ul>
+                <li>
+                    <a href="/Portfolio/index.html#one" onclick="toggle()">피자 드 시우</a>
+                </li>
+                <li>
+                    <a href="/Portfolio/index.html#two" onclick="toggle()">대표메뉴</a>
+                </li>
+                <li>
+                    <a href="/Portfolio/index.html#three" onclick="toggle()">가맹안내</a>
+                </li>
+                <li>
+                    <a href="/Portfolio/index.html#four" onclick="toggle()">고객센터</a>
+                </li>
+                <li>
+                    <a href="/Portfolio/index.html#five" onclick="toggle()">커뮤니티</a>
+                </li>
+            </ul>
+            <div class="toggle" onclick="toggle()"></div>
         </header>
         <main id="brand">
             <section class="main">
-                <div class="main_head">
-                    <div class="main_head_title"><h1>피자 드 시우</h1></div>
-                    <div class="main_head_nav"><p>HOME / 피자 드 시우 / <strong>브랜드이야기</strong></p></div>
-                </div>
                 <div class="main_body">
                     <div class="main_right">
                         <article class="main_text">
@@ -156,20 +104,6 @@
                 </div>    
             </section>
         </main>
-        <footer>
-            <div class="bottom">
-                <span class="footer-logo"><img src="../img/footer_logo.png" alt="푸터로고"></span>
-                <p class="footer-text">
-                    부산 동래구 여고북로 8 | TEL:010-1234-5678 | Email:abcd@abcd.com <br>
-                    사업자등록번호:123-45-78910 | 대표자:김시우 | Instagram:pizza 
-
-                </p>
-            </div>
-            <div class="bottom-img">
-                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            </div>
-        </footer>
     </div>
 </body>
 </html>
