@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>게시판</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    // Add the new slick-theme.css if you want the default styling
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+
+
+    </style>
+
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <div id="top-wrap">
+                <div class="inner-box" id="tip-box-top">
+                    <a href="#">
+                        <img class="logo" src="../img/main.png" alt="로고">
+                        <h1 class="hidden">피자</h1>
+                    </a>
+                    <div class="util-nav">
+                        <a href="#">로그인</a>
+                        <a href="#">회원가입</a>
+                    </div>
+                </div>
+            </div>
+            <div id="gnb" class="gnb-wrap">
+                <div class="gnb-inner">
+                    <ul>
+                        <li class="active">
+                            <a href="#">
+                                <span>메뉴</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <span>e-쿠폰</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <span>상품권 선물</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <span>이벤트제휴</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <span>매장검색</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div id="list">
+            <section id="content">
+                <div class="sub-type member">
+                    <div class="inner-box">
+                        <div class="page-title-wrap v2">
+                            <h2 class="page-title">게시판</h2>
+                            <div class="depth-area">
+                                <ol>
+                                    <li>
+                                        <a href="#">홈</a>
+                                    </li>
+                                    <li>
+                                        <strong>게시판</strong>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <article class="list">
+                            <h3>글목록</h3>
+                            <article>
+                                <p>
+                                    홍길동님 반갑습니다.
+                                    <a href="#" class="logout">[로그아웃]</a>
+                                </p>
+                                <table border="0">
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>제목</th>
+                                        <th>글쓴이</th>
+                                        <th>날짜</th>
+                                        <th>조회</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><a href="#">테스트 제목입니다.</a>&nbsp;[3]</td>
+                                        <td>길동이</td>
+                                        <td>20-09-18</td>
+                                        <td>12</td>
+                                    </tr>
+                                </table>
+                            </article>
+                            <!-- 페이지 네비게이션 -->
+                            <div class="paging">
+                                <a href="#" class="prev">이전</a>
+                                <a href="#" class="num current">1</a>
+                                <a href="#" class="num">2</a>
+                                <a href="#" class="num">3</a>
+                                <a href="#" class="next">다음</a>
+                            </div>
+                            <!-- 글쓰기 버튼 -->
+                            <a href="#" class="btnWrite">글쓰기</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <footer id="footer">
+                <div class="footer-area">
+                    <div class="inner-box">
+                        <div class="footer-order">
+                            <i></i>
+                            <span class="tel">1234-1234</span>
+                        </div>
+                    
+                        <ul class="footer-contact">
+                            <li>
+                                <a href="#">이용약관</a>
+                            </li>
+                            <li>
+                                <a href="#">개인정보처리방침</a>
+                            </li>
+                            <li>
+                                <a href="#">고객센터</a>
+                            </li>
+                            <li>
+                                <a href="#">인재채용</a>
+                            </li>
+                            <li>
+                                <a href="#">가맹점모집</a>
+                            </li>
+                            <li>
+                                <a href="#">단체주문</a>
+                            </li>
+                        </ul>
+                        <div class="footer-info">
+                            <p>부산광역시 부산진구 서면 어딘가 어긴다 | 대표이사 : 김갑돌</p>
+                            <p>사업자 등록번호 : 123-45-67890 | 통신판매업신고 : 부산 1234호 | 개인정보보호책임자 : 홍길동</p>
+                            <p>문의 : abcd@abcd.com</p>
+                            <p>Copyright ⓒ Domino’s Pizza. All rights reserved. </p>
+                        </div>
+                        <div class="footer-cont">
+                            <div class="sns-box">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i></i>
+                                            블로그
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i></i>
+                                            인스타그램
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i></i>
+                                            페이스북
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i></i>
+                                            유튜브
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i></i>
+                                            트위터
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <title>게시판</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var elm = ".sec";
+            $(elm).each(function (index) {
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                    } 
+                    else if (event.detail)
+                        delta = -event.detail / 3;
+                    var moveTop = $(window).scrollTop();
+                    var elmSelecter = $(elm).eq(index);
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(elmSelecter).next() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).next().offset().top;
+                            }catch(e){}
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(elmSelecter).prev() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).prev().offset().top;
+                            }catch(e){}
+                        }
+                    }
+                     
+                    // 화면 이동 0.8초(800)
+                    $("html,body").stop().animate({
+                        scrollTop: moveTop + 'px'
+                    }, {
+                        duration: 100, complete: function () {
+                        }
+                    });
+                });
+            });
+        }
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="/Port2/index.html#home" onclick="toggle()">Home</a></li>
+            <li><a href="#about" onclick="toggle()">About</a></li>
+            <li><a href="#services" onclick="toggle()">Services</a></li>
+            <li><a href="#portfolio" onclick="toggle()">Portfolio</a></li>
+            <li><a href="#team" onclick="toggle()">Team</a></li>
+            <li><a href="#contact" onclick="toggle()">Contact</a></li>
+        </ul>
+        <div class="toggle" onclick="toggle()">
+        </div>
+    </header>
+    <section id="board">
+        <!-- Services -->
+        <section>
+            <div id="page_title" class="sbtImg subTopBg_00">
+                <div class="page_title_in">
+                    <h2>
+                        <strong title="회원가입약관">게시판</strong>
+                        <span class="locationBar" title="현재위치">
+                            <span>
+                                <em class="fa fa-home" aria-hidden="true">
+                                  
+                                </em>
+                                 HOME
+                                <i class="fa fa-angle-right" aria-hidden="true">
+                                 
+                                </i>
+                            </span>
+                            <span class="loc1D">게시판</span>
+                            <span class="loc2D">
+                                <!--2차메뉴-->
+                            </span>
+                        </span>
+                    </h2>
+                </div>
+            </div>
+            <div id="ctWrap">
+                <div id="container">
+                   <div id="bo_list" style="width: 100%">
+                        <div id="bo_btn_top">
+                            <div id="bo_list_total">
+                                <span>
+                                    <i class="fa fa-file-o">
+                                        Total 11 /
+                                    </i>
+                                </span>
+                                    1page
+                            </div>
+                        </div>
+                        <form name="fboardlist" id="fboardlist" action="#" method="POST">
+                            <h2 class="sound_only">기본게시판목록</h2>
+                            <div class="likeTbl">
+                                <ul>
+                                    <li class="likeTblTr likeTblTh">
+                                        <div class="mvInlineN">번호</div>
+                                        <div>제목</div>
+                                        <div class="mvInlineN">작성자</div>
+                                        <div class="mvInlineN td_num">
+                                            <a href="#">
+                                                조회
+                                                <i class="fa fa-sort" aria-hidden="true">
+
+                                                </i>
+                                            </a>
+                                        </div>
+                                        <div class="mvInlineN td_datetime">
+                                            <a href="#">
+                                                날짜
+                                                <i class="fa fa-sort" aria-hidden="true">
+
+                                                </i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="bo_notice likeTblTr likeTblTd">
+                                        <div class="mvInlineN td_num2">
+                                            <strong class="notice_icon">
+                                                <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                                                <span class="sound_only">공지</span>
+                                            </strong>
+                                        </div>
+                                        <div class="td_subject" style="padding-left: 0px">
+                                            <div class="bo_tit">
+                                                <a href="#">
+                                                    공지사항
+                                                    <em>
+                                                        <span class="hot_icon">
+                                                            H
+                                                            <span class="sound_only">인기글</span>
+                                                        </span>
+                                                    </em>
+                                                    <span class="sound_only">댓글</span>
+                                                    <span class="cnt_cmt">+ 1</span>
+                                                    <span class="sound_only">개</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <span class="onlyMvV" style="padding-left: 0px"></span>
+                                        <div class="mvInlinev td_name sv_use">
+                                            <span class="sv_member">관리자</span>
+                                        </div>
+                                        <div class="mvInlinev td_num">
+                                            <i class="fa fa-eye"></i>
+                                            2000
+                                        </div>
+                                        <div class="mvInlinev td_datetime">
+                                            <i class="fa fa-clock-o"></i>
+                                            10-06
+                                        </div>
+                                    </li>
+                                    <li class="likeTbTr likeTblTd">
+                                        <div class="mvInlineN td_num2">10</div>
+                                        <div class="td_subject" style="padding-left: 0px">
+                                            <div class="bo_tit">
+                                                <a href="#">
+                                                    안녕하세요
+                                                    <em>
+                                                        <span class="hot_icon">
+                                                            H
+                                                            <span class="sound_only">인기글</span>
+                                                        </span>
+                                                    </em>
+                                                    <span class="sound_only">댓글</span>
+                                                    <span class="cnt_cmt">+ 1</span>
+                                                    <span class="sound_only">개</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <span class="onlyMvV" style="padding-left: 0px"></span>
+                                        <div class="mvInlinev td_name sv_use">
+                                            <span class="sv_member">관리자</span>
+                                        </div>
+                                        <div class="mvInlinev td_num">
+                                            <i class="fa fa-eye"></i>
+                                            2000
+                                        </div>
+                                        <div class="mvInlinev td_datetime">
+                                            <i class="fa fa-clock-o"></i>
+                                            10-06
+                                        </div>    
+                                    </li>
+                                    <li class="likeTbTr likeTblTd">
+                                        <div class="mvInlineN td_num2">9</div>
+                                        <div class="td_subject" style="padding-left: 0px">
+                                            <div class="bo_tit">
+                                                <a href="#">
+                                                    안녕하세요
+                                                    <em>
+                                                        <span class="hot_icon">
+                                                            H
+                                                            <span class="sound_only">인기글</span>
+                                                        </span>
+                                                    </em>
+                                                    <span class="sound_only">댓글</span>
+                                                    <span class="cnt_cmt">+ 1</span>
+                                                    <span class="sound_only">개</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <span class="onlyMvV" style="padding-left: 0px"></span>
+                                        <div class="mvInlinev td_name sv_use">
+                                            <span class="sv_member">관리자</span>
+                                        </div>
+                                        <div class="mvInlinev td_num">
+                                            <i class="fa fa-eye"></i>
+                                            2000
+                                        </div>
+                                        <div class="mvInlinev td_datetime">
+                                            <i class="fa fa-clock-o"></i>
+                                            10-06
+                                        </div>    
+                                    </li>
+                                    <li class="likeTbTr likeTblTd">
+                                        <div class="mvInlineN td_num2">8</div>
+                                        <div class="td_subject" style="padding-left: 0px">
+                                            <div class="bo_tit">
+                                                <a href="#">
+                                                    안녕하세요
+                                                    <em>
+                                                        <span class="hot_icon">
+                                                            H
+                                                            <span class="sound_only">인기글</span>
+                                                        </span>
+                                                    </em>
+                                                    <span class="sound_only">댓글</span>
+                                                    <span class="cnt_cmt">+ 1</span>
+                                                    <span class="sound_only">개</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <span class="onlyMvV" style="padding-left: 0px"></span>
+                                        <div class="mvInlinev td_name sv_use">
+                                            <span class="sv_member">관리자</span>
+                                        </div>
+                                        <div class="mvInlinev td_num">
+                                            <i class="fa fa-eye"></i>
+                                            2000
+                                        </div>
+                                        <div class="mvInlinev td_datetime">
+                                            <i class="fa fa-clock-o"></i>
+                                            10-06
+                                        </div>    
+                                    </li>
+                                    <li class="likeTbTr likeTblTd">
+                                        <div class="mvInlineN td_num2">7</div>
+                                        <div class="td_subject" style="padding-left: 0px">
+                                            <div class="bo_tit">
+                                                <a href="#">
+                                                    안녕하세요
+                                                    <em>
+                                                        <span class="hot_icon">
+                                                            H
+                                                            <span class="sound_only">인기글</span>
+                                                        </span>
+                                                    </em>
+                                                    <span class="sound_only">댓글</span>
+                                                    <span class="cnt_cmt">+ 1</span>
+                                                    <span class="sound_only">개</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <span class="onlyMvV" style="padding-left: 0px"></span>
+                                        <div class="mvInlinev td_name sv_use">
+                                            <span class="sv_member">관리자</span>
+                                        </div>
+                                        <div class="mvInlinev td_num">
+                                            <i class="fa fa-eye"></i>
+                                            2000
+                                        </div>
+                                        <div class="mvInlinev td_datetime">
+                                            <i class="fa fa-clock-o"></i>
+                                            10-06
+                                        </div>    
+                                    </li>
+                                    <li class="likeTbTr likeTblTd">
+                                        <div class="mvInlineN td_num2">6</div>
+                                        <div class="td_subject" style="padding-left: 0px">
+                                            <div class="bo_tit">
+                                                <a href="#">
+                                                    안녕하세요
+                                                    <em>
+                                                        <span class="hot_icon">
+                                                            H
+                                                            <span class="sound_only">인기글</span>
+                                                        </span>
+                                                    </em>
+                                                    <span class="sound_only">댓글</span>
+                                                    <span class="cnt_cmt">+ 1</span>
+                                                    <span class="sound_only">개</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <span class="onlyMvV" style="padding-left: 0px"></span>
+                                        <div class="mvInlinev td_name sv_use">
+                                            <span class="sv_member">관리자</span>
+                                        </div>
+                                        <div class="mvInlinev td_num">
+                                            <i class="fa fa-eye"></i>
+                                            2000
+                                        </div>
+                                        <div class="mvInlinev td_datetime">
+                                            <i class="fa fa-clock-o"></i>
+                                            10-06
+                                        </div>    
+                                    </li>
+                                    <li class="likeTbTr likeTblTd">
+                                        <div class="mvInlineN td_num2">5</div>
+                                        <div class="td_subject" style="padding-left: 0px">
+                                            <div class="bo_tit">
+                                                <a href="#">
+                                                    안녕하세요
+                                                    <em>
+                                                        <span class="hot_icon">
+                                                            H
+                                                            <span class="sound_only">인기글</span>
+                                                        </span>
+                                                    </em>
+                                                    <span class="sound_only">댓글</span>
+                                                    <span class="cnt_cmt">+ 1</span>
+                                                    <span class="sound_only">개</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <span class="onlyMvV" style="padding-left: 0px"></span>
+                                        <div class="mvInlinev td_name sv_use">
+                                            <span class="sv_member">관리자</span>
+                                        </div>
+                                        <div class="mvInlinev td_num">
+                                            <i class="fa fa-eye"></i>
+                                            2000
+                                        </div>
+                                        <div class="mvInlinev td_datetime">
+                                            <i class="fa fa-clock-o"></i>
+                                            10-06
+                                        </div>    
+                                    </li>
+                                    <li class="likeTbTr likeTblTd">
+                                        <div class="mvInlineN td_num2">4</div>
+                                        <div class="td_subject" style="padding-left: 0px">
+                                            <div class="bo_tit">
+                                                <a href="#">
+                                                    안녕하세요
+                                                    <em>
+                                                        <span class="hot_icon">
+                                                            H
+                                                            <span class="sound_only">인기글</span>
+                                                        </span>
+                                                    </em>
+                                                    <span class="sound_only">댓글</span>
+                                                    <span class="cnt_cmt">+ 1</span>
+                                                    <span class="sound_only">개</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <span class="onlyMvV" style="padding-left: 0px"></span>
+                                        <div class="mvInlinev td_name sv_use">
+                                            <span class="sv_member">관리자</span>
+                                        </div>
+                                        <div class="mvInlinev td_num">
+                                            <i class="fa fa-eye"></i>
+                                            2000
+                                        </div>
+                                        <div class="mvInlinev td_datetime">
+                                            <i class="fa fa-clock-o"></i>
+                                            10-06
+                                        </div>    
+                                    </li>
+                                    <li class="likeTbTr likeTblTd">
+                                        <div class="mvInlineN td_num2">3</div>
+                                        <div class="td_subject" style="padding-left: 0px">
+                                            <div class="bo_tit">
+                                                <a href="#">
+                                                    안녕하세요
+                                                    <em>
+                                                        <span class="hot_icon">
+                                                            H
+                                                            <span class="sound_only">인기글</span>
+                                                        </span>
+                                                    </em>
+                                                    <span class="sound_only">댓글</span>
+                                                    <span class="cnt_cmt">+ 1</span>
+                                                    <span class="sound_only">개</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <span class="onlyMvV" style="padding-left: 0px"></span>
+                                        <div class="mvInlinev td_name sv_use">
+                                            <span class="sv_member">관리자</span>
+                                        </div>
+                                        <div class="mvInlinev td_num">
+                                            <i class="fa fa-eye"></i>
+                                            2000
+                                        </div>
+                                        <div class="mvInlinev td_datetime">
+                                            <i class="fa fa-clock-o"></i>
+                                            10-06
+                                        </div>    
+                                    </li>
+                                    <li class="likeTbTr likeTblTd">
+                                        <div class="mvInlineN td_num2">2</div>
+                                        <div class="td_subject" style="padding-left: 0px">
+                                            <div class="bo_tit">
+                                                <a href="#">
+                                                    안녕하세요
+                                                    <em>
+                                                        <span class="hot_icon">
+                                                            H
+                                                            <span class="sound_only">인기글</span>
+                                                        </span>
+                                                    </em>
+                                                    <span class="sound_only">댓글</span>
+                                                    <span class="cnt_cmt">+ 1</span>
+                                                    <span class="sound_only">개</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <span class="onlyMvV" style="padding-left: 0px"></span>
+                                        <div class="mvInlinev td_name sv_use">
+                                            <span class="sv_member">관리자</span>
+                                        </div>
+                                        <div class="mvInlinev td_num">
+                                            <i class="fa fa-eye"></i>
+                                            2000
+                                        </div>
+                                        <div class="mvInlinev td_datetime">
+                                            <i class="fa fa-clock-o"></i>
+                                            10-06
+                                        </div>    
+                                    </li>
+                                    <li class="likeTbTr likeTblTd">
+                                        <div class="mvInlineN td_num2">1</div>
+                                        <div class="td_subject" style="padding-left: 0px">
+                                            <div class="bo_tit">
+                                                <a href="#">
+                                                    안녕하세요
+                                                    <em>
+                                                        <span class="hot_icon">
+                                                            H
+                                                            <span class="sound_only">인기글</span>
+                                                        </span>
+                                                    </em>
+                                                    <span class="sound_only">댓글</span>
+                                                    <span class="cnt_cmt">+ 1</span>
+                                                    <span class="sound_only">개</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <span class="onlyMvV" style="padding-left: 0px"></span>
+                                        <div class="mvInlinev td_name sv_use">
+                                            <span class="sv_member">관리자</span>
+                                        </div>
+                                        <div class="mvInlinev td_num">
+                                            <i class="fa fa-eye"></i>
+                                            2000
+                                        </div>
+                                        <div class="mvInlinev td_datetime">
+                                            <i class="fa fa-clock-o"></i>
+                                            10-06
+                                        </div>    
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
+                        <fieldset id="bo_sch">
+                            <legend>게시물 검색</legend>
+                            <form action="#" method="GET">
+                                <label for="sfl" class="sound_only">검색대상</label>
+                                <select name="sfl" id="sfl">
+                                    <option value="wr_subject||wr_content">제목+내용</option>
+                                    <option value="wr_subject">제목</option>
+                                    <option value="wr_content">내용</option>
+                                    <option value="mb_id,1">회원아이디</option>
+                                    <option value="wr_name,1">작성자</option>
+                                </select>
+                                <label for="stx" class="sound_only">
+                                    검색어
+                                    <strong class="sound_only">필수</strong>
+                                </label>
+                                <input type="text" name="stx" value required id="stx" class="sch_input" size="25" maxlength="20" placeholder="검색어를 입력해주세요">
+                                <button type="submit" value="검색" class="sch_btn">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                    <span class="sound_only">검색</span>
+                                </button>
+                            </form>
+                        </fieldset>
+                   </div>
+                </div>
+                <!-- 회원가입 약관 동의 끝-->
+                
+            </div>
+        </section>
+        
+    </section>
+
+<script type="text/javascript">
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })
+    function toggle(){
+        var header = document.querySelector("header");
+        header.classList.toggle("active");
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <title>brand</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var elm = ".sec";
+            $(elm).each(function (index) {
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                    } 
+                    else if (event.detail)
+                        delta = -event.detail / 3;
+                    var moveTop = $(window).scrollTop();
+                    var elmSelecter = $(elm).eq(index);
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(elmSelecter).next() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).next().offset().top;
+                            }catch(e){}
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(elmSelecter).prev() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).prev().offset().top;
+                            }catch(e){}
+                        }
+                    }
+                     
+                    // 화면 이동 0.8초(800)
+                    $("html,body").stop().animate({
+                        scrollTop: moveTop + 'px'
+                    }, {
+                        duration: 100, complete: function () {
+                        }
+                    });
+                });
+            });
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="/Port2/index.html#home" onclick="toggle()">Home</a></li>
+            <li><a href="#about" onclick="toggle()">About</a></li>
+            <li><a href="#services" onclick="toggle()">Services</a></li>
+            <li><a href="#portfolio" onclick="toggle()">Portfolio</a></li>
+            <li><a href="#team" onclick="toggle()">Team</a></li>
+            <li><a href="#contact" onclick="toggle()">Contact</a></li>
+        </ul>
+        <div class="toggle" onclick="toggle()">
+        </div>
+    </header>
+    <section id="about">
+        <!-- Services -->
+        <section class="sec about" id="services">
+            <div class="content">
+                <div class="mxw800p">
+                    <h3>Levelop</h3>
+                    <p>
+                        레벨롭은 2018년 세상에 등장했습니다. <br>
+                        맨땅에 헤딩으로 지금까지 살아오면서 도움을 요청할 곳이 마땅치 않았던 모든 사람들과<br>
+                        또는 지나친 정보의 홍수 속에서 어떤 정보를 선택해야될지 몰랐던 사람들을 위해<br>
+                        정말 필요한 정보들만 모아모아 알려드리겠습니다.<br>
+                    </p>
+                </div>
+                <div class="services">
+                    <div class="box">
+                        <div class="iconBx">
+                            <img src="./img/i1.jpg">
+                        </div>
+                        <div class="content">
+                            <h2>Histroy</h2>
+                            <p>
+                                2018년 창업 <br>
+                                2019년 파트너 점포 100개 돌파<br>
+                                2020년 잘나감<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="iconBx">
+                            <img src="./img/i2.jpg">
+                        </div>
+                        <div class="content">
+                            <h2>CUSTOMER</h2>
+                            <p>
+                                Phone : 070-1234-1234<br>
+                                Email : abcd@abcd.co.kr <br>
+                                FAX   : 070-1234-1234<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="iconBx">
+                            <img src="./img/i3.jpg">
+                        </div>
+                        <div class="content">
+                            <h2>Contact</h2>
+                            <p>
+                                부산광역시 금정구 장전동 <br>
+                                높은빌딩 4층 401호.<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Team -->
+        <section class="sec" id="team">
+            <div class="content">
+                <div class="mxw800p">
+                    <h3>PartnerShip</h3>
+                    <p>
+                        저희와 함께하는 파트너들 입니다. <br>
+                    </p>
+                </div>
+                    <div class="teamBx">
+                    <div class="member">
+                        <div class="imgBx">
+                            <img src="../img/1.jpg">
+                        </div>
+                        <div class="details">
+                            <div>
+                                <h2>John Do<br><span>Creative Director</span></h2>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="member">
+                        <div class="imgBx">
+                            <img src="../img/2.jpg">
+                        </div>
+                        <div class="details">
+                            <div>
+                                <h2>John Do<br><span>Creative Director</span></h2>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="member">
+                        <div class="imgBx">
+                            <img src="../img/3.jpg">
+                        </div>
+                        <div class="details">
+                            <div>
+                                <h2>John Do<br><span>Creative Director</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <div class="imgBx">
+                            <img src="../img/4.jpg">
+                        </div>
+                        <div class="details">
+                            <div>
+                                <h2>John Do<br><span>Creative Director</span></h2>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+    </section>
+
+<script type="text/javascript">
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })
+    function toggle(){
+        var header = document.querySelector("header");
+        header.classList.toggle("active");
+    }
+</script>
+
+
+</body>
+</html>

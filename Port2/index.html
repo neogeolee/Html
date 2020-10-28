@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <title>레벨롭</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var elm = ".sec";
+            $(elm).each(function (index) {
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                    } 
+                    else if (event.detail)
+                        delta = -event.detail / 3;
+                    var moveTop = $(window).scrollTop();
+                    var elmSelecter = $(elm).eq(index);
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(elmSelecter).next() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).next().offset().top;
+                            }catch(e){}
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(elmSelecter).prev() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).prev().offset().top;
+                            }catch(e){}
+                        }
+                    }
+                     
+                    // 화면 이동 0.8초(800)
+                    $("html,body").stop().animate({
+                        scrollTop: moveTop + 'px'
+                    }, {
+                        duration: 100, complete: function () {
+                        }
+                    });
+                });
+            });
+        }
+    </script>
+    
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#home" onclick="toggle()">Home</a></li>
+            <li><a href="#about" onclick="toggle()">About</a></li>
+            <li><a href="#services" onclick="toggle()">Services</a></li>
+            <li><a href="#portfolio" onclick="toggle()">Portfolio</a></li>
+            <li><a href="#team" onclick="toggle()">Team</a></li>
+            <li><a href="#contact" onclick="toggle()">Contact</a></li>
+        </ul>
+        <div class="toggle" onclick="toggle()">
+        </div>
+    </header>
+    <section id="index">
+        <!-- Banner -->
+        <section class="banner" id="home">
+            <h2>We WILL<br/> <span>SHARE BETTER</span> IDEA</h2>
+        </section>
+        <!-- About -->
+        <section class="sec" id="about">
+            <div class="content">
+                <div class="mxw800p">
+                    <h3>Who We Are</h3>
+                    <p>
+                        생각을 공유하고 배움을 나눕니다. <br>
+                        경쟁은 너무나도 치열하고 배우지 않으면 살아날 수 없는 시대<br>
+                        그럼에도 살아가고, 그럼에도 장사하는 여러분을 위해 준비했습니다.<br>
+                        지금까지 우리가 쌓아온 노하우와 꿀팁을 나눠 드립니다.<br>
+                    </p>
+                        <a href="#" class="btn">Read Our Story</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Services -->
+        <section class="sec about" id="services">
+            <div class="content">
+                <div class="mxw800p">
+                    <h3>With You</h3>
+                    <p>
+                        어디서부터 어떻게 시작해야될지 모를 당신을 위해 <br>
+                        저희가 지금까지 배우고, 생각했던 것들을 알려드립니다.<br>
+                        배우지않으면 살아남을 수 없는 이 세상에서<br>
+                        여러분들을 위한 등대가 되어드리겠습니다.<br>
+                    </p>
+                </div>
+                <div class="services">
+                    <div class="box">
+                        <div class="iconBx">
+                            <img src="./img/i1.jpg">
+                        </div>
+                        <div class="content">
+                            <h2>Knowhow</h2>
+                            <p>
+                                다년간의 현장경험으로 얻은 노하우를 알려드립니다. <br>
+                                이론적인 것뿐만 아니라 현장에서 바로 적용할 수 있는 노하우<br>
+                                저희가 도와드리겠습니다.<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="iconBx">
+                            <img src="./img/i2.jpg">
+                        </div>
+                        <div class="content">
+                            <h2>Development</h2>
+                            <p>
+                                장사도 끊임없이 개발해야 합니다. <br>
+                                혼자서는 힘들 그 길을<br>
+                                저희가 같이 올라가드리겠습니다.<br>
+                                상생하는 세상 같이 하겠습니다.<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="iconBx">
+                            <img src="./img/i3.jpg">
+                        </div>
+                        <div class="content">
+                            <h2>Branding</h2>
+                            <p>
+                                브랜드만들기가 중요하다고 하는데 어디서부터 해야할지 알 수 없었죠? <br>
+                                저희와 함께 브랜드를 만들어 갑시다.<br>
+                                어렵고 힘들다고 해도 끝까지 가겠습니다.<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Stats -->
+        <section class="sec stats">
+            <div class="content">
+                <div class="mxw800p">
+                    <h3>Our Achievements</h3>
+                    <p>
+                        지금까지 많은 분들이 저희와 함께 해주셨습니다. <br>
+                        위기가 곧 기회라는 말이 있습니다.<br>
+                        레벨업의 기회는 지금일 수도 있습니다.<br>
+                    </p>
+                </div>
+                <div class="statsBox">
+                    <div class="box">
+                        <h2>100+</h2>
+                        <h4>Projects</h4>
+                    </div>
+                    <div class="box">
+                        <h2>100+</h2>
+                        <h4>Happy Clients</h4>
+                    </div>
+                    <div class="box">
+                        <h2>100+</h2>
+                        <h4>Brand</h4>
+                    </div>
+                    <div class="box">
+                        <h2>100+</h2>
+                        <h4>Awards</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio -->
+        <section class="sec work" id="portfolio">
+            <div class="content">
+                <div class="mxw800p">
+                    <h3>Recent Work</h3>
+                    <p>
+                        상생하는 기업이 되겠습니다. <br>
+                        나 혼자가 아닌 우리 함께로 가겠습니다.<br>
+                    </p>
+                </div>
+                <div class="workBx">
+                    <div class="brand">
+                        <a href="#"><h2>Brand Name</h2></a>
+                    </div>
+                    <div class="brand">
+                        <a href="#"><h2>Brand Name</h2></a>
+                    </div>
+                    <div class="brand">
+                        <a href="#"><h2>Brand Name</h2></a>
+                    </div>
+                    <div class="brand">
+                        <a href="#"><h2>Brand Name</h2></a>
+                    </div>
+                    <div class="brand">
+                        <a href="#"><h2>Brand Name</h2></a>
+                    </div>
+                    <div class="brand">
+                        <a href="#"><h2>Brand Name</h2></a>
+                    </div>
+                    <div class="brand">
+                        <a href="#"><h2>Brand Name</h2></a>
+                    </div>
+                    <div class="brand">
+                        <a href="#"><h2>Brand Name</h2></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- Team -->
+        <section class="sec" id="team">
+            <div class="content">
+                <div class="mxw800p">
+                    <h3>Meet Our Expert</h3>
+                    <p>
+                        다양한 분야의 다양한 전문가 들과 함께합니다. <br>
+                    </p>
+                </div>
+                    <div class="teamBx">
+                    <div class="member">
+                        <div class="imgBx">
+                            <img src="./img/1.jpg">
+                        </div>
+                        <div class="details">
+                            <div>
+                                <h2>John Do<br><span>Creative Director</span></h2>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="member">
+                        <div class="imgBx">
+                            <img src="./img/2.jpg">
+                        </div>
+                        <div class="details">
+                            <div>
+                                <h2>John Do<br><span>Creative Director</span></h2>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="member">
+                        <div class="imgBx">
+                            <img src="./img/3.jpg">
+                        </div>
+                        <div class="details">
+                            <div>
+                                <h2>John Do<br><span>Creative Director</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <div class="imgBx">
+                            <img src="./img/4.jpg">
+                        </div>
+                        <div class="details">
+                            <div>
+                                <h2>John Do<br><span>Creative Director</span></h2>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- Contact -->
+        <section class="sec contact" id="contact">
+            <div class="content">
+                <div class="mxw800p">
+                    <h3>Join Us</h3>
+                    <p>회원이시면 로그인을 해주세요</p>
+                    <p>회원가입을 하시면 좀 더 다양한 정보를 얻을 수 있습니다.</p>
+                </div>
+                <div class="contactForm">
+                    <form action="#">
+                        <div class="row100">
+                            <div class="inputBx50">
+                                <input type="text" name="id" placeholder="ID">
+                            </div>
+                            <div class="inputBx50">
+                                <input type="password" name="pass" placeholder="PASSWORD">
+                            </div>
+                        </div>
+                        <div class="row100">
+                        </div>
+                        <div class="row100">
+                            <div class="inputBx100">
+                                <input type="submit" name="login" value="LOGIN">
+                                <input type="submit" name="join" value="JOIN">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="sci">
+                    <ul>
+                        <li><a href="#"><img src="./img/facebook.png"></a></li>
+                        <li><a href="#"><img src="./img/twitter.png"></a></li>
+                        <li><a href="#"><img src="./img/linkedin.png"></a></li>
+                    </ul>
+                </div>
+                <p class="copyright">Design & Developed By <a href="#">Online Tutorials</a></p>
+            </div>
+            
+        </section>
+    </section>
+
+
+
+<script type="text/javascript">
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })
+    function toggle(){
+        var header = document.querySelector("header");
+        header.classList.toggle("active");
+    }
+</script>
+
+
+</body>
+</html>

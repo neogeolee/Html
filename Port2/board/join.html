@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var elm = ".sec";
+            $(elm).each(function (index) {
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                    } 
+                    else if (event.detail)
+                        delta = -event.detail / 3;
+                    var moveTop = $(window).scrollTop();
+                    var elmSelecter = $(elm).eq(index);
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(elmSelecter).next() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).next().offset().top;
+                            }catch(e){}
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(elmSelecter).prev() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).prev().offset().top;
+                            }catch(e){}
+                        }
+                    }
+                     
+                    // 화면 이동 0.8초(800)
+                    $("html,body").stop().animate({
+                        scrollTop: moveTop + 'px'
+                    }, {
+                        duration: 100, complete: function () {
+                        }
+                    });
+                });
+            });
+        }
+    </script>
+    <style>
+
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="/Port2/index.html#home" onclick="toggle()">Home</a></li>
+            <li><a href="#about" onclick="toggle()">About</a></li>
+            <li><a href="#services" onclick="toggle()">Services</a></li>
+            <li><a href="#portfolio" onclick="toggle()">Portfolio</a></li>
+            <li><a href="#team" onclick="toggle()">Team</a></li>
+            <li><a href="#contact" onclick="toggle()">Contact</a></li>
+        </ul>
+        <div class="toggle" onclick="toggle()">
+        </div>
+    </header>
+    <section id="register">
+        <!-- Services -->
+        <section>
+            <div id="page_title" class="sbtImg subTopBg_00">
+                <div class="page_title_in">
+                    <h2>
+                        <strong title="회원가입">회원가입</strong>
+                        <span class="locationBar" title="현재위치">
+                            <span>
+                                <em class="fa fa-home" aria-hidden="true">
+                                  
+                                </em>
+                                 HOME
+                                <i class="fa fa-angle-right" aria-hidden="true">
+                                 
+                                </i>
+                            </span>
+                            <span class="loc1D">회원가입</span>
+                            <span class="loc2D">
+                                <!--2차메뉴-->
+                            </span>
+                        </span>
+                    </h2>
+                </div>
+            </div>
+            <div id="ctWrap">
+                <div id="container">
+                    <section id="user" class="join">
+                        <form action="#" method="POST">
+                            <table border="1">
+                                <caption>사이트 이용정보 입력</caption>
+                                <tr>
+                                    <td>아이디</td>
+                                    <td>
+                                        <input type="text" name="uid" placeholder="아이디입력"/>
+                                        <span class="resultId"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>비밀번호</td>
+                                    <td>
+                                        <input type="password" name="pass1" placeholder="비밀번호 입력"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>비밀번호 확인</td>
+                                    <td>
+                                        <input type="password" name="pass2" placeholder="비밀번호 확인입력"/>
+                                        <span class="resultPass"></span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table border="1">
+                                <caption>개인정보 입력</caption>
+                                <tr>
+                                    <td>아름</td>
+                                    <td>
+                                        <input type="text" name="name" placeholder="이름 입력"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>별명</td>
+                                    <td>
+                                        <p>공백없이 한글,영문,숫자만 입력가능</p>
+                                        <input type="text" name="nick" placeholder="별명 입력"/>
+                                        <span class="reultNick"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>E-Mail</td>
+                                    <td>
+                                        <input type="text" name="email" placeholder="이메일 입력"/>
+                                        <span class="resultPass"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>휴대폰</td>
+                                    <td>
+                                        <input type="text" name="hp" placeholder="- 포함 13자리 입력" minlength="13" maxlength="13"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>주소</td>
+                                    <td>
+                                        <div>
+                                            <input type="text" name="zip" placeholder="우편번호" readonly/>
+                                            <button class="btnZip">주소검색</button>
+                                        </div>
+                                        <div>
+                                            <input type="text" name="addr1" placeholder="주소를 검색하세요" readonly/>
+                                        </div>
+                                        <div>
+                                            <input type="text" name="addr2" placeholder="상세주소를 입력하세요" />
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div>
+                                <a href="./login.html" class="btnCancel">취소</a>
+                                <input type="submit"   class="btnJoin" value="회원가입"/>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+                <!-- 회원가입 약관 동의 끝-->
+                
+            </div>
+        </section>
+        
+    </section>
+
+<script type="text/javascript">
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })
+    function toggle(){
+        var header = document.querySelector("header");
+        header.classList.toggle("active");
+    }
+</script>
+
+
+</body>
+</html>

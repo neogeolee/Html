@@ -20,84 +20,46 @@
 </head>
 <body>
     <div id="wrapper">
-        <header>
-            <div class="top">
-                <div class="logo">
-                    <div>
-                        <a href="#"><img src="../img/main.png" alt="메인"></a>
+        <header id="header">
+            <div id="top-wrap">
+                <div class="inner-box" id="tip-box-top">
+                    <a href="#">
+                        <img class="logo" src="../img/main.png" alt="로고">
+                        <h1 class="hidden">피자</h1>
+                    </a>
+                    <div class="util-nav">
+                        <a href="#">로그인</a>
+                        <a href="#">회원가입</a>
                     </div>
                 </div>
-                <div class="menu">
-                    <ul class="nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle"><span>피자 드 시우</span></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">브랜드이야기</a>
-                                </li>
-                                <li>
-                                    <a href="#">인테리어컨샙</a>
-                                </li>
-                            </ul>
+            </div>
+            <div id="gnb" class="gnb-wrap">
+                <div class="gnb-inner">
+                    <ul>
+                        <li class="active">
+                            <a href="#">
+                                <span>메뉴</span>
+                            </a>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle"><span>대표메뉴</span></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">오리지널피자</a>
-                                </li>
-                                <li>
-                                    <a href="#">스페셜피자</a>
-                                </li>
-                                <li>
-                                    <a href="#">사이드메뉴</a>
-                                </li>
-                            </ul>
+                        <li class="active">
+                            <a href="#">
+                                <span>e-쿠폰</span>
+                            </a>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle"><span>가맹안내</span></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">가맹안내</a>
-                                </li>
-                                <li>
-                                    <a href="#">가맹절차</a>
-                                </li>
-                                <li>
-                                    <a href="#">가맹FAQ</a>
-                                </li>
-                                <li>
-                                    <a href="#">가맹문의</a>
-                                </li>
-                            </ul>
+                        <li class="active">
+                            <a href="#">
+                                <span>상품권 선물</span>
+                            </a>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle"><span>매장안내</span></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">신규매장</a>
-                                </li>
-                                <li>
-                                    <a href="#">오시는길</a>
-                                </li>
-                            </ul>
+                        <li class="active">
+                            <a href="#">
+                                <span>이벤트제휴</span>
+                            </a>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle"><span>COMMUNITY</span></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">공지사항</a>
-                                </li>
-                                <li>
-                                    <a href="#">이벤트</a>
-                                </li>
-                                <li>
-                                    <a href="#">보도자료</a>
-                                </li>
-                                <li>
-                                    <a href="#">SNS</a>
-                                </li>
-                            </ul>
+                        <li class="active">
+                            <a href="#">
+                                <span>매장검색</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -105,10 +67,6 @@
         </header>
         <main id="menu_og">
             <section class="main">
-                <div class="main_head">
-                    <div class="main_head_title"><h1>피자 드 시우</h1></div>
-                    <div class="main_head_nav"><p>HOME / 대표메뉴 / <strong>오리지널피자</strong></p></div>
-                </div>
                 <div class="main_body">
                     <div class="main_top">
                         <article class="main_body_title">
@@ -407,18 +365,77 @@
                 </div>    
             </section>
         </main>
-        <footer>
-            <div class="bottom">
-                <span class="footer-logo"><img src="../img/footer_logo.png" alt="푸터로고"></span>
-                <p class="footer-text">
-                    부산 동래구 여고북로 8 | TEL:010-1234-5678 | Email:abcd@abcd.com <br>
-                    사업자등록번호:123-45-78910 | 대표자:김시우 | Instagram:pizza 
-
-                </p>
-            </div>
-            <div class="bottom-img">
-                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <footer id="footer">
+            <div class="footer-area">
+                <div class="inner-box">
+                    <div class="footer-order">
+                        <i></i>
+                        <span class="tel">1234-1234</span>
+                    </div>
+                
+                    <ul class="footer-contact">
+                        <li>
+                            <a href="#">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="#">개인정보처리방침</a>
+                        </li>
+                        <li>
+                            <a href="#">고객센터</a>
+                        </li>
+                        <li>
+                            <a href="#">인재채용</a>
+                        </li>
+                        <li>
+                            <a href="#">가맹점모집</a>
+                        </li>
+                        <li>
+                            <a href="#">단체주문</a>
+                        </li>
+                    </ul>
+                    <div class="footer-info">
+                        <p>부산광역시 부산진구 서면 어딘가 어긴다 | 대표이사 : 김갑돌</p>
+                        <p>사업자 등록번호 : 123-45-67890 | 통신판매업신고 : 부산 1234호 | 개인정보보호책임자 : 홍길동</p>
+                        <p>문의 : abcd@abcd.com</p>
+                        <p>Copyright ⓒ Domino’s Pizza. All rights reserved. </p>
+                    </div>
+                    <div class="footer-cont">
+                        <div class="sns-box">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i></i>
+                                        블로그
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i></i>
+                                        인스타그램
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i></i>
+                                        페이스북
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i></i>
+                                        유튜브
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i></i>
+                                        트위터
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </footer>
     </div>

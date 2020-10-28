@@ -15,45 +15,54 @@
     <style>
 
     </style>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>    
-    <script type="text/javascript">
-        window.addEventListener("scroll", function(){
-            var header = document.querySelector("header");
-            header.classList.toggle("sticky", window.scrollY > 0);
-        })
-        function toggle(){
-            var header = document.querySelector("header");
-            header.classList.toggle("active");
-        }
-    </script>
-    
     
 </head>
 <body>
     <div id="wrapper">
         <header id="header">
-            <div>
-                
-                <a href="#" class="logo"><img src="../img/main.png"></a>
+            <div id="top-wrap">
+                <div class="inner-box" id="tip-box-top">
+                    <a href="#">
+                        <img class="logo" src="../img/main.png" alt="로고">
+                        <h1 class="hidden">피자</h1>
+                    </a>
+                    <div class="util-nav">
+                        <a href="#">로그인</a>
+                        <a href="#">회원가입</a>
+                    </div>
+                </div>
             </div>
-            <ul>
-                <li>
-                    <a href="/Portfolio/index.html#one" onclick="toggle()">피자 드 시우</a>
-                </li>
-                <li>
-                    <a href="/Portfolio/index.html#two" onclick="toggle()">대표메뉴</a>
-                </li>
-                <li>
-                    <a href="/Portfolio/index.html#three" onclick="toggle()">가맹안내</a>
-                </li>
-                <li>
-                    <a href="/Portfolio/index.html#four" onclick="toggle()">고객센터</a>
-                </li>
-                <li>
-                    <a href="/Portfolio/index.html#five" onclick="toggle()">커뮤니티</a>
-                </li>
-            </ul>
-            <div class="toggle" onclick="toggle()"></div>
+            <div id="gnb" class="gnb-wrap">
+                <div class="gnb-inner">
+                    <ul>
+                        <li class="active">
+                            <a href="#">
+                                <span>메뉴</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <span>e-쿠폰</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <span>상품권 선물</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <span>이벤트제휴</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <span>매장검색</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </header>
         <main id="interioir">
             <section class="main">
@@ -112,6 +121,79 @@
                 </div>
             </section>
         </main>
+        <footer id="footer">
+            <div class="footer-area">
+                <div class="inner-box">
+                    <div class="footer-order">
+                        <i></i>
+                        <span class="tel">1234-1234</span>
+                    </div>
+                
+                    <ul class="footer-contact">
+                        <li>
+                            <a href="#">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="#">개인정보처리방침</a>
+                        </li>
+                        <li>
+                            <a href="#">고객센터</a>
+                        </li>
+                        <li>
+                            <a href="#">인재채용</a>
+                        </li>
+                        <li>
+                            <a href="#">가맹점모집</a>
+                        </li>
+                        <li>
+                            <a href="#">단체주문</a>
+                        </li>
+                    </ul>
+                    <div class="footer-info">
+                        <p>부산광역시 부산진구 서면 어딘가 어긴다 | 대표이사 : 김갑돌</p>
+                        <p>사업자 등록번호 : 123-45-67890 | 통신판매업신고 : 부산 1234호 | 개인정보보호책임자 : 홍길동</p>
+                        <p>문의 : abcd@abcd.com</p>
+                        <p>Copyright ⓒ Domino’s Pizza. All rights reserved. </p>
+                    </div>
+                    <div class="footer-cont">
+                        <div class="sns-box">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i></i>
+                                        블로그
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i></i>
+                                        인스타그램
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i></i>
+                                        페이스북
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i></i>
+                                        유튜브
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i></i>
+                                        트위터
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
